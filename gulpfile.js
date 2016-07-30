@@ -4,6 +4,7 @@ var sass        = require('gulp-sass');
 var cp          = require('child_process');
 var prefix      = require('gulp-autoprefixer');
 var cssmin      = require('gulp-cssmin');
+var ghPages     = require('gulp-gh-pages');
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
@@ -68,6 +69,15 @@ gulp.task('watch', function () {
         '_includes/*.html',
     ], ['jekyll-rebuild']);
 });
+
+/**
+ * Deploy
+ */
+
+ gulp.task('deploy', function() {
+   return gulp.src('_site/**/*', {dot: true})
+     .pipe(ghPages());
+ });
 
 /**
  * Default task, running just `gulp` will compile the sass,
