@@ -74,7 +74,7 @@ gulp.task('watch', function () {
  * Deploy
  */
 
- gulp.task('deploy', function() {
+ gulp.task('deploy', ['sass', 'jekyll-build'], function() {
    return gulp.src('_site/**/*', {dot: true})
      .pipe(ghPages());
  });
