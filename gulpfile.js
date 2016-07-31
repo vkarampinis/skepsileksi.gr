@@ -6,6 +6,7 @@ var prefix      = require('gulp-autoprefixer');
 var cssmin      = require('gulp-cssmin');
 var concat      = require('gulp-concat');
 var uglify      = require('gulp-uglify');
+var seq         = require('run-sequence');
 var ghPages     = require('gulp-gh-pages');
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
@@ -32,12 +33,16 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['sass', 'css-vendor', 'js-vendor', 'jekyll-build'], function() {
-    browserSync({
-        server: {
-            baseDir: '_site'
-        }
+gulp.task('browser-sync', function(done) {
+    seq('build', 'jekyll-build', function(){
+       browserSync({
+            server: {
+                baseDir: '_site'
+            }
+        });
+        done();
     });
+
 });
 
 
@@ -55,7 +60,7 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('_site/assets/css'))
         .pipe(browserSync.reload({stream:true}))
         .pipe(cssmin({ keepSpecialComments: 0 }))
-        .pipe(gulp.dest('css'));
+        .pipe(gulp.dest('assets/css'))
 });
 
 /**
@@ -76,9 +81,11 @@ gulp.task('watch', function () {
  * Deploy
  */
 
- gulp.task('deploy', ['sass', 'css-vendor', 'js-vendor', 'jekyll-build'], function() {
-   return gulp.src('_site/**/*', {dot: true})
-     .pipe(ghPages());
+ gulp.task('deploy', function(done) {
+
+   seq('build', 'jekyll-build',
+      gulp.src('_site/**/*', {dot: true})
+     .pipe(ghPages()), done);
  });
 
  /**
@@ -92,10 +99,9 @@ gulp.task('css-vendor', function () {
         ])
     .pipe(concat("vendors.min.css"))
     .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-    .pipe(gulp.dest('_site/assets/css'))
+    .pipe(gulp.dest('assets/css'))
     .pipe(browserSync.reload({stream:true}))
     .pipe(cssmin({ keepSpecialComments: 0 }))
-    .pipe(gulp.dest('css'));
 });
 
 /*
@@ -108,7 +114,7 @@ gulp.task('js-vendor', function () {
         ])
         .pipe(concat('vendors.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('_site/assets/js'));
+        .pipe(gulp.dest('assets/js'));
 });
 
 
@@ -117,3 +123,8 @@ gulp.task('js-vendor', function () {
  * compile the jekyll site, launch BrowserSync & watch files.
  */
 gulp.task('default', ['browser-sync', 'watch']);
+
+
+gulp.task('build', function (done) {
+    seq('sass', 'css-vendor', 'js-vendor', done);
+});

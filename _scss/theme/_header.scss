@@ -1,0 +1,25 @@
+header {
+  background-image: url('../images/rainbow.png');
+  background-repeat: repeat-x;
+  background-size: 500px 4px;
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+  .navbar-toggle {
+    border-color: #ddd;
+  }
+  .navbar-toggle .icon-bar {
+    background-color: #888;
+  }
+  .logo {
+    display: block;
+    width: 350px;
+    height: 83px;
+    background-image: url('../images/logo.png');
+    background-repeat: no-repeat;
+    background-size: 80%;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+}
