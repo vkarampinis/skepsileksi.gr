@@ -4,6 +4,8 @@ var sass        = require('gulp-sass');
 var cp          = require('child_process');
 var prefix      = require('gulp-autoprefixer');
 var cssmin      = require('gulp-cssmin');
+var concat      = require('gulp-concat');
+var uglify      = require('gulp-uglify');
 var ghPages     = require('gulp-gh-pages');
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
@@ -30,7 +32,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['sass', 'css-vendor', 'js-vendor', 'jekyll-build'], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -48,9 +50,9 @@ gulp.task('sass', function () {
         .pipe(sass({
             includePaths: ['scss'],
             onError: browserSync.notify
-        }))
+        }).on('error', sass.logError))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-        .pipe(gulp.dest('_site/css'))
+        .pipe(gulp.dest('_site/assets/css'))
         .pipe(browserSync.reload({stream:true}))
         .pipe(cssmin({ keepSpecialComments: 0 }))
         .pipe(gulp.dest('css'));
@@ -74,10 +76,41 @@ gulp.task('watch', function () {
  * Deploy
  */
 
- gulp.task('deploy', ['sass', 'jekyll-build'], function() {
+ gulp.task('deploy', ['sass', 'css-vendor', 'js-vendor', 'jekyll-build'], function() {
    return gulp.src('_site/**/*', {dot: true})
      .pipe(ghPages());
  });
+
+ /**
+ *  Compile, minify, mobilize vendor css
+ */
+
+gulp.task('css-vendor', function () {
+
+    return gulp.src([
+            './bower_components/bootstrap/dist/css/bootstrap.css'
+        ])
+    .pipe(concat("vendors.min.css"))
+    .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+    .pipe(gulp.dest('_site/assets/css'))
+    .pipe(browserSync.reload({stream:true}))
+    .pipe(cssmin({ keepSpecialComments: 0 }))
+    .pipe(gulp.dest('css'));
+});
+
+/*
+ * Compile and minify js
+ */
+gulp.task('js-vendor', function () {
+    return gulp.src([
+            './bower_components/jquery/dist/jquery.js',
+            './bower_components/bootstrap/dist/js/bootstrap.js'
+        ])
+        .pipe(concat('vendors.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('_site/assets/js'));
+});
+
 
 /**
  * Default task, running just `gulp` will compile the sass,

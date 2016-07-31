@@ -8,3 +8,5 @@ Repo of www.skepsileksi.gr
 `bundle install`
 
 `npm install`
+
+`bower install`

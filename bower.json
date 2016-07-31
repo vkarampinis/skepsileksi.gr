@@ -1,0 +1,22 @@
+{
+  "name": "skepsileksi.gr",
+  "description": "skepsileksi.gr Website",
+  "main": "",
+  "authors": [
+    "Vaios Karampinis <oden@oden.gr>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/vkarampinis/skepsileksi.gr",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "bootstrap": "^3.3.7"
+  }
+}
