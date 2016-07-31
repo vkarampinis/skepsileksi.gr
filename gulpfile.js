@@ -81,12 +81,14 @@ gulp.task('watch', function () {
  * Deploy
  */
 
- gulp.task('deploy', function(done) {
-
-   seq('build', 'jekyll-build',
-      gulp.src('_site/**/*', {dot: true})
-     .pipe(ghPages()), done);
+gulp.task('deploy', function(done) {
+  seq('build', 'jekyll-build', 'push-gh', done);
  });
+
+gulp.task('push-gh', function(){
+  return gulp.src('_site/**/*', {dot: true})
+   .pipe(ghPages());;
+})
 
  /**
  *  Compile, minify, mobilize vendor css
