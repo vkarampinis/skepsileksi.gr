@@ -1,7 +1,4 @@
 header {
-  background-image: url('../images/rainbow.png');
-  background-repeat: repeat-x;
-  background-size: 500px 4px;
   .dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0;
@@ -12,14 +9,65 @@ header {
   .navbar-toggle .icon-bar {
     background-color: #888;
   }
-  .logo {
-    display: block;
-    width: 350px;
-    height: 83px;
-    background-image: url('../images/logo.png');
-    background-repeat: no-repeat;
-    background-size: 80%;
-    margin-left: 20px;
+  .navbar {
+    background-image: url('../images/rainbow.png');
+    background-repeat: repeat-x;
+    background-size: 500px 4px;
+    border: 0;
+    min-height: 80px;
+    background-color: #fff;
+  }
+  .dropdown-menu > li > a,
+  .navbar-default .navbar-nav > li > a {
+    color: #404040;
+    font-family: 'VAG-HandWritten';
+  }
+  .navbar-default .navbar-nav > li.open,
+  .navbar-default .navbar-nav > li:hover {
+    > a {
+      background-color: #2796d8;
+      border-radius: 5px;
+      color: #fff;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .navbar-brand {
+    height: auto;
+    min-height: 80px;
+  }
+  ul.nav {
+    margin-top: 30px;
+    margin-right: 50px;
+  }
+  a.navbar-brand {
+    padding: 0;
     margin-top: 10px;
+    margin-left: 30px;
+  }
+  ,
+  .dropdown-menu > li > a,
+  .navbar-default .navbar-nav > li > a {
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .navbar-right .dropdown-menu {
+    left: 0;
+    right: auto;
+  }
+}
+@media (max-width: 767px) {
+  .navbar-brand > img {
+    height: 35px;
+    margin-top: 0;
+  }
+  .navbar-toggle {
+    margin-top: 15px;
+  }
+  ,
+  .dropdown-menu > li > a,
+  .navbar-default .navbar-nav > li > a {
+    font-size: 20px;
   }
 }
