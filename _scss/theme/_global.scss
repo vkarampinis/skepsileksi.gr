@@ -12,7 +12,7 @@ h6 {
 }
 p {
   font-size: 16px;
-  line-height: 26px;
+  line-height: 28px;
 }
 .color-blue {
   color: $color-blue;
@@ -28,4 +28,28 @@ p {
 }
 .color-orange {
   color: $color-orange;
+}
+section {
+  display: block;
+  padding: 30px 0;
+}
+.bg-image {
+  background-image: url('../images/background-flowers.png');
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+.bg-blue {
+  background-color: $color-blue;
+}
+.bg-green {
+  background-color: $color-green;
+}
+.bg-yellow {
+  background-color: $color-yellow;
+}
+.bg-pink {
+  background-color: $color-pink;
+}
+.bg-orange {
+  background-color: $color-orange;
 }
