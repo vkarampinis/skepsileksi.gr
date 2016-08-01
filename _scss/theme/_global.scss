@@ -29,27 +29,33 @@ p {
 .color-orange {
   color: $color-orange;
 }
+.color-white {
+  color: #fff;
+}
 section {
   display: block;
   padding: 30px 0;
+}
+.btn {
+  color: #fff;
 }
 .bg-image {
   background-image: url('../images/background-flowers.png');
   background-repeat: repeat-x;
   background-position: bottom;
 }
-.bg-blue {
+.bg-blue, .btn-blue {
   background-color: $color-blue;
 }
-.bg-green {
+.bg-green, .btn-green {
   background-color: $color-green;
 }
-.bg-yellow {
+.bg-yellow, .btn-yellow {
   background-color: $color-yellow;
 }
-.bg-pink {
+.bg-pink, .btn-pink {
   background-color: $color-pink;
 }
-.bg-orange {
+.bg-orange, .btn-orange {
   background-color: $color-orange;
 }
