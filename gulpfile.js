@@ -73,7 +73,7 @@ gulp.task('watch', function () {
         '*.html',
         '_layouts/*.html',
         '_posts/*',
-        '_includes/*.html',
+        '_includes/**/*.html',
     ], ['jekyll-rebuild']);
 });
 

@@ -1,0 +1,12 @@
+#welcome {
+  .welcome-image {
+    background-image: url('../images/kid-playing.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 250px;
+  }
+  .welcome-text {
+    padding-top: 50px;
+  }
+}

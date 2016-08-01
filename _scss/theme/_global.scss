@@ -1,0 +1,31 @@
+body {
+  font-family: $default-font;
+  color: $color-text;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $header-font;
+}
+p {
+  font-size: 16px;
+  line-height: 26px;
+}
+.color-blue {
+  color: $color-blue;
+}
+.color-green {
+  color: $color-green;
+}
+.color-yellow {
+  color: $color-yellow;
+}
+.color-pink {
+  color: $color-pink;
+}
+.color-orange {
+  color: $color-orange;
+}
