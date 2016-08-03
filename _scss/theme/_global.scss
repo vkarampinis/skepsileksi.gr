@@ -29,6 +29,9 @@ p {
 .color-orange {
   color: $color-orange;
 }
+.color-grey {
+  color: $color-grey;
+}
 .color-white {
   color: #fff;
 }
@@ -58,4 +61,7 @@ section {
 }
 .bg-orange, .btn-orange {
   background-color: $color-orange;
+}
+.bg-grey, .btn-grey {
+  background-color: $color-grey;
 }
