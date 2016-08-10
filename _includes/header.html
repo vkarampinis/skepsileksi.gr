@@ -1,7 +1,7 @@
 <header>
   <nav class="navbar navbar-default" role="navigation">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#"><img src="{{ '/assets/images/logo.png' | prepend: site.url }}"/></a>
+      <a class="navbar-brand" href="#"><img src="{{ 'assets/images/logo.png' | prepend: site.baseurl }}"/></a>
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".header-nav">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -44,10 +44,12 @@
           </ul>
         </li>
         <li>
-          <a href="#">Επικοινωνία</a>
+          <a href="{{ 'contact' | prepend: site.baseurl }}">Επικοινωνία</a>
         </li>
       </ul>
     </div>
   </nav>
 
 </header>
+
+{{ site.baseurl}}

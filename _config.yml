@@ -11,7 +11,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Σύγχρονο κέντρο πρόληψης, διάγνωσης και αποκατάστασης των διαταραχών λόγου
   και ομιλίας και των διαταραχών λεπτής και αδρής κινητικότητας καθώς και
   της διάσπασης της προσοχής.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://vkarampinis.github.io/skepsileksi.gr" # the base hostname & protocol for your site
 
 # Markdown settings
