@@ -9,7 +9,6 @@ var uglify      = require('gulp-uglify');
 var seq         = require('run-sequence');
 var ghPages     = require('gulp-gh-pages');
 
-var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 };
@@ -86,7 +85,7 @@ gulp.task('deploy', function(done) {
  });
 
 gulp.task('push-gh', function(){
-  return gulp.src('**/*', {dot: false})
+  return gulp.src('_site/**/*', {dot: true})
    .pipe(ghPages());;
 })
 
