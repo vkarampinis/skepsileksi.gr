@@ -1,0 +1,36 @@
+footer {
+  position: relative;
+  min-height: 50px;
+  margin-top: -10px;
+  background-color: $color-blue;
+  padding-top: 20px;
+  img {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    top: -90px;
+    text-align: center;
+    width: 100%;
+  }
+  .row {
+    min-height: 100px;
+    margin: 0;
+  }
+  p.copyright {
+    height: 50px;
+    line-height: 50px;
+    background-color: $color-green;
+    color: #fff;
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+#clouds path {
+  fill: $color-blue;
+  bottom: 0;
+  position: absolute;
+  overflow: hidden;
+  stroke: $color-blue;
+}
