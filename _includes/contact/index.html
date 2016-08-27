@@ -5,9 +5,16 @@
     </li>
     <li class="active">Επικοινωνία</li>
   </ol>
-
+  <div id="success" class="alert bg-pink col-lg-12 hide">
+    <p class="color-white">
+      <strong>Σας ευχαριστόυμε!</strong>
+    </p>
+    <p class="color-white">
+      Σύντομα θα επικοινωνήσουμε μαζί σας.
+    </p>
+  </div>
   <div class="col-lg-6">
-    <h2>Που θα μας βρείτε</h2>
+    <h2 class="color-blue">Που θα μας βρείτε</h2>
     <p>
       Το κέντρο μας βρίσκετε στο κέντρο του Λαγκαδά<br/>
       Ματαπά 11, δίπλα από το ταχυδρομείο
@@ -15,7 +22,7 @@
     <p>
       Τηλέφωνο επικοινωνίας: 23940 24555, 6942414511
     </p>
-    <h2>Φόρμα Επικοινωνίας</h2>
+    <h2 class="color-blue">Φόρμα Επικοινωνίας</h2>
     <form action="https://formspree.io/oden@oden.gr" method="POST">
       <div class="form-group">
         <label>Το όνομα σας</label>
@@ -29,7 +36,7 @@
         <label>Το μήνυμα σας</label>
         <textarea name="message" rows="5" class="form-control"></textarea>
       </div>
-      <input type="hidden" name="_next" value="{{ 'contact' | prepend: site.baseurl }}"/>
+      <input type="hidden" name="_next" value="{{ 'contact' | prepend: site.baseurl }}#success"/>
       <input type="hidden" name="_subject" value="Contact Form: Σκέψη Λέξη"/>
       <input type="text" name="_gotcha" style="display:none"/>
       <input type="hidden" name="_cc" value="skepsileksi@oden.gr"/>
@@ -38,7 +45,7 @@
   </div>
   <div class="col-lg-6">
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&key=AIzaSyAcxzwR8xrP1IXjwt5-y7nHDarwEj32ICw"></script>
-    <h2>Βρείτε μας στο χάρτη</h2>
+    <h2 class="color-blue">Βρείτε μας στο χάρτη</h2>
     <div style="overflow:hidden;height:500px;width:100%;">
       <div id="gmap_canvas" style="height:500px;width:100%"></div>
       <script type="text/javascript">
@@ -64,3 +71,10 @@
     </div>
   </div>
 </div>
+
+<script>
+  if (window.location.href.match(/\#success/)) {
+    var elem = document.getElementsByClassName("alert")[0];
+    elem.className = elem.className.replace('hide', '');
+  }
+</script>
