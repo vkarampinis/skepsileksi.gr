@@ -1,53 +1,54 @@
 <header>
-  <nav class="navbar navbar-default" role="navigation">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="{{ site.baseurl }}"><img src="{{ 'assets/images/logo.png' | prepend: site.baseurl }}"/></a>
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".header-nav">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-    <div class="collapse navbar-collapse header-nav">
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a href="{{ site.baseurl }}">Αρχική</a>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            Υπηρεσίες
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-              <a href="{{ 'logo' | prepend: site.baseurl }}">Λογοθεραπεία</a>
-            </li>
-            <li>
-              <a href="{{ 'ergo' | prepend: site.baseurl }}">Εργοθεραπεία</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">Το κέντρο μας</a>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            Θεραπευτές
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-              <a href="#">Αποστολάκη Μαρία</a>
-            </li>
-            <li>
-              <a href="#">Τσιόγκα Αλεξάνδρα</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="{{ 'contact' | prepend: site.baseurl }}">Επικοινωνία</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
+  <div class="container">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="{{ site.baseurl }}"><img src="{{ 'assets/images/logo.png' | prepend: site.baseurl }}"/></a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".header-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse header-nav">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="{{ site.baseurl }}">Αρχική</a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              Υπηρεσίες
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="{{ 'logo' | prepend: site.baseurl }}">Λογοθεραπεία</a>
+              </li>
+              <li>
+                <a href="{{ 'ergo' | prepend: site.baseurl }}">Εργοθεραπεία</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Το κέντρο μας</a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              Θεραπευτές
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Αποστολάκη Μαρία</a>
+              </li>
+              <li>
+                <a href="#">Τσιόγκα Αλεξάνδρα</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="{{ 'contact' | prepend: site.baseurl }}">Επικοινωνία</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 </header>

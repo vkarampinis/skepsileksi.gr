@@ -10,7 +10,8 @@ h5,
 h6 {
   font-family: $header-font;
 }
-p, ul li {
+p,
+ul li {
   font-size: 16px;
   line-height: 28px;
 }
@@ -41,27 +42,37 @@ section {
 }
 .btn {
   color: #fff;
+  &:hover {
+    color: #fff;
+    font-weight: bold;
+  }
 }
 .bg-image {
   background-image: url('../images/background-flowers.png');
   background-repeat: repeat-x;
   background-position: bottom;
 }
-.bg-blue, .btn-blue {
+.bg-blue,
+.btn-blue {
   background-color: $color-blue;
 }
-.bg-green, .btn-green {
+.bg-green,
+.btn-green {
   background-color: $color-green;
 }
-.bg-yellow, .btn-yellow {
+.bg-yellow,
+.btn-yellow {
   background-color: $color-yellow;
 }
-.bg-pink, .btn-pink {
+.bg-pink,
+.btn-pink {
   background-color: $color-pink;
 }
-.bg-orange, .btn-orange {
+.bg-orange,
+.btn-orange {
   background-color: $color-orange;
 }
-.bg-grey, .btn-grey {
+.bg-grey,
+.btn-grey {
   background-color: $color-grey;
 }
