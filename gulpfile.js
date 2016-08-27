@@ -52,6 +52,7 @@ gulp.task('browser-sync', function(done) {
 gulp.task('sass', function () {
     return gulp.src('_scss/main.scss')
         .pipe(sass({
+            sourceComments: true,
             includePaths: ['scss'],
             onError: browserSync.notify
         }).on('error', sass.logError))
@@ -75,6 +76,7 @@ gulp.task('watch', function () {
         '_includes/**/*.html',
         'logo/**/*.html',
         'ergo/**/*.html',
+        'kentro/**/*.html',
     ], ['jekyll-rebuild']);
 });
 
@@ -98,7 +100,8 @@ gulp.task('push-gh', function(){
 gulp.task('css-vendor', function () {
 
     return gulp.src([
-            './bower_components/bootstrap/dist/css/bootstrap.css'
+            './bower_components/bootstrap/dist/css/bootstrap.css',
+            './bower_components/jsonlylightbox/css/lightbox.css'
         ])
     .pipe(concat("vendors.min.css"))
     .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
@@ -113,7 +116,8 @@ gulp.task('css-vendor', function () {
 gulp.task('js-vendor', function () {
     return gulp.src([
             './bower_components/jquery/dist/jquery.js',
-            './bower_components/bootstrap/dist/js/bootstrap.js'
+            './bower_components/bootstrap/dist/js/bootstrap.js',
+            './bower_components/jsonlylightbox/js/lightbox.js'
         ])
         .pipe(concat('vendors.min.js'))
         .pipe(uglify())

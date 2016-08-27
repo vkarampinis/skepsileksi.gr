@@ -16,7 +16,10 @@
     "tests"
   ],
   "dependencies": {
+  },
+  "devDependencies": {
     "jquery": "^3.1.0",
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "jsonlylightbox": "^0.5.4"
   }
 }

@@ -1,1 +1,4 @@
 <script type="text/javascript" src="{{ 'assets/js/vendors.min.js' | prepend: site.baseurl }}"></script>
+{% if page.page == "kentro" %}
+  {% include kentro/scripts.html %}
+{% endif %}
