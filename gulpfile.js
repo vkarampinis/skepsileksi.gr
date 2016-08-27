@@ -74,8 +74,8 @@ gulp.task('watch', function () {
         '_layouts/*.html',
         '_posts/*',
         '_includes/**/*.html',
-        'logo/**/*.html',
-        'ergo/**/*.html',
+        'logotherapia/**/*.html',
+        'ergotherapia/**/*.html',
         'kentro/**/*.html',
     ], ['jekyll-rebuild']);
 });
