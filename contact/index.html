@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="el">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Κέντρο Λογοθεραπείας και Εργοθεραπείας &amp;bull; Σκέψη - Λέξη</title>
+  <meta name="description" content="Σύγχρονο κέντρο πρόληψης, διάγνωσης και αποκατάστασης των διαταραχών λόγου και ομιλίας και των διαταραχών λεπτής και αδρής κινητικότητας καθώς και της διάσπασης της προσοχής.
+">
+
+  <link rel="stylesheet" href="/assets/css/vendors.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="http://dev.skepsileksi.grhttp://dev.skepsileksi.gr/contact/">
+
+  <link type="application/atom+xml" rel="alternate" href="http://dev.skepsileksi.gr//feed.xml" title="Κέντρο Λογοθεραπείας και Εργοθεραπείας &bull; Σκέψη - Λέξη" />
+</head>
+
+
+  <body>
+
+    <header>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><img src="/assets/images/logo.png"/></a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".header-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse header-nav">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="./">Αρχική</a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            Υπηρεσίες
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="/logo">Λογοθεραπεία</a>
+            </li>
+            <li>
+              <a href="/ergo">Εργοθεραπεία</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Το κέντρο μας</a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            Θεραπευτές
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#">Αποστολάκη Μαρία</a>
+            </li>
+            <li>
+              <a href="#">Τσιόγκα Αλεξάνδρα</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="/contact">Επικοινωνία</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+</header>
+
+
+    <div class="container">
+  <ol class="breadcrumb">
+    <li>
+      <a href="/">Αρχική</a>
+    </li>
+    <li class="active">Επικοινωνία</li>
+  </ol>
+
+  <div class="col-lg-6">
+    <h2>Που θα μας βρείτε</h2>
+    <p>
+      Το κέντρο μας βρίσκετε στο κέντρο του Λαγκαδά<br />
+      Ματαπά 11, δίπλα από το ταχυδρομείο
+    </p>
+    <p>
+      Τηλέφωνο επικοινωνίας: 23940 24555, 6942414511
+    </p>
+    <h2>Φόρμα Επικοινωνίας</h2>
+    <form action="https://formspree.io/oden@oden.gr" method="POST">
+      <div class="form-group">
+        <label>Το όνομα σας</label>
+        <input type="text" class="form-control" name="name">
+      </div>
+      <div class="form-group">
+        <label>Το email σας</label>
+        <input type="email" class="form-control" name="email">
+      </div>
+      <div class="form-group">
+        <label>Το μήνυμα σας</label>
+        <textarea name="message" rows="5" class="form-control"></textarea>
+      </div>
+      <input type="hidden" name="_next" value=""/contact""/>
+      <input type="hidden" name="_subject" value="Contact Form: Σκέψη Λέξη"/>
+      <input type="text" name="_gotcha" style="display:none"/>
+      <input type="hidden" name="_cc" value="skepsileksi@oden.gr"/>
+      <button type="submit" class="btn btn-blue">Αποστολή</button>
+    </form>
+  </div>
+  <div class="col-lg-6">
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <h2>Βρείτε μας στο χάρτη</h2>
+    <div style="overflow:hidden;height:500px;width:100%;">
+      <div id="gmap_canvas" style="height:500px;width:100%">
+      </div>
+      <script type="text/javascript">
+        function init_map() {
+          var myOptions = {
+            zoom: 17,
+            center: new google.maps.LatLng(40.7505455, 23.06987730000003),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+          };
+          map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
+          marker = new google.maps.Marker({
+            map: map,
+            position: new google.maps.LatLng(40.7505455, 23.06987730000003)
+          });
+          infowindow = new google.maps.InfoWindow({content: "<b>Σκέψη - Λέξη</b><br/>Ματαπά 11<br/>Λαγκαδάς"});
+          google.maps.event.addListener(marker, "click", function() {
+            infowindow.open(map, marker);
+          });
+          infowindow.open(map, marker);
+        }
+        google.maps.event.addDomListener(window, 'load', init_map);
+      </script>
+    </div>
+  </div>
+
+
+
+    <svg id="clouds" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="120" viewBox="0 0 85 100" preserveAspectRatio="none">
+  <path
+    d="M-5 100 Q 0 20 5 100 Z
+            M0 100 Q 5 0 10 100
+            M5 100 Q 10 30 15 100
+            M10 100 Q 15 10 20 100
+            M15 100 Q 20 30 25 100
+            M20 100 Q 25 -10 30 100
+            M25 100 Q 30 10 35 100
+            M30 100 Q 35 30 40 100
+            M35 100 Q 40 10 45 100
+            M40 100 Q 45 50 50 100
+            M45 100 Q 50 20 55 100
+            M50 100 Q 55 40 60 100
+            M55 100 Q 60 60 65 100
+            M60 100 Q 65 50 70 100
+            M65 100 Q 70 20 75 100
+            M70 100 Q 75 45 80 100
+            M75 100 Q 80 30 85 100
+            M80 100 Q 85 20 90 100
+            M85 100 Q 90 50 95 100
+            M90 100 Q 95 25 100 100
+            M95 100 Q 100 15 105 100 Z"></path>
+</svg>
+<footer>
+  <img src="/assets/images/footer.png"/>
+  <div class="row">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4"></div>
+  </div>
+  <p class="copyright">
+    Κέντρο Λογοθεραπείς και Εργοθεραπείας “Σκέψη - Λέξη” © 2016.
+  </p>
+</footer>
+
+    <script type="text/javascript" src="/assets/js/vendors.min.js"></script>
+
+
+  </body>
+
+</html>
