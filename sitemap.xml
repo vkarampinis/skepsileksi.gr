@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://dev.skepsileksi.gr//contact/</loc>
+<loc>http://dev.skepsileksi.gr//</loc>
 </url>
 <url>
 <loc>http://dev.skepsileksi.gr//ergo/</loc>
@@ -10,12 +10,33 @@
 <loc>http://dev.skepsileksi.gr//kentro/</loc>
 </url>
 <url>
+<loc>http://dev.skepsileksi.gr//logo/dikaiologitika_gia_tin_xorigisi_synedriwn_logotherapeias/</loc>
+</url>
+<url>
+<loc>http://dev.skepsileksi.gr//logo/fysiologiki_anaptyksi_tou_logou_kai_tis_omilias/</loc>
+</url>
+<url>
+<loc>http://dev.skepsileksi.gr//logo/o_rolos_tou_KEDDY/</loc>
+</url>
+<url>
 <loc>http://dev.skepsileksi.gr//logo/pote_prepei_na_symvoulefteite_enan_logotherapefti/</loc>
+</url>
+<url>
+<loc>http://dev.skepsileksi.gr//logo/prwti_episkepsi/</loc>
+</url>
+<url>
+<loc>http://dev.skepsileksi.gr//logo/syxnes_erwtiseis/</loc>
+</url>
+<url>
+<loc>http://dev.skepsileksi.gr//logo/syxnotita_synedriwn/</loc>
+</url>
+<url>
+<loc>http://dev.skepsileksi.gr//logo/xrisi_katallilwn_paixnidiwn_kai_drastiriotitwn/</loc>
 </url>
 <url>
 <loc>http://dev.skepsileksi.gr//logo/</loc>
 </url>
 <url>
-<loc>http://dev.skepsileksi.gr//</loc>
+<loc>http://dev.skepsileksi.gr//contact/</loc>
 </url>
 </urlset>
