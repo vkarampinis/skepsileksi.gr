@@ -1,0 +1,66 @@
+<div class="container">
+  <ol class="breadcrumb">
+    <li>
+      <a href="{{ site.baseurl }}">Αρχική</a>
+    </li>
+    <li class="active">Επικοινωνία</li>
+  </ol>
+
+  <div class="col-lg-6">
+    <h2>Που θα μας βρείτε</h2>
+    <p>
+      Το κέντρο μας βρίσκετε στο κέντρο του Λαγκαδά<br />
+      Ματαπά 11, δίπλα από το ταχυδρομείο
+    </p>
+    <p>
+      Τηλέφωνο επικοινωνίας: 23940 24555, 6942414511
+    </p>
+    <h2>Φόρμα Επικοινωνίας</h2>
+    <form action="https://formspree.io/oden@oden.gr" method="POST">
+      <div class="form-group">
+        <label>Το όνομα σας</label>
+        <input type="text" class="form-control" name="name">
+      </div>
+      <div class="form-group">
+        <label>Το email σας</label>
+        <input type="email" class="form-control" name="email">
+      </div>
+      <div class="form-group">
+        <label>Το μήνυμα σας</label>
+        <textarea name="message" rows="5" class="form-control"></textarea>
+      </div>
+      <input type="hidden" name="_next" value=""{{ 'contact' | prepend: site.baseurl }}""/>
+      <input type="hidden" name="_subject" value="Contact Form: Σκέψη Λέξη"/>
+      <input type="text" name="_gotcha" style="display:none"/>
+      <input type="hidden" name="_cc" value="skepsileksi@oden.gr"/>
+      <button type="submit" class="btn btn-blue">Αποστολή</button>
+    </form>
+  </div>
+  <div class="col-lg-6">
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <h2>Βρείτε μας στο χάρτη</h2>
+    <div style="overflow:hidden;height:500px;width:100%;">
+      <div id="gmap_canvas" style="height:500px;width:100%">
+      </div>
+      <script type="text/javascript">
+        function init_map() {
+          var myOptions = {
+            zoom: 17,
+            center: new google.maps.LatLng(40.7505455, 23.06987730000003),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+          };
+          map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
+          marker = new google.maps.Marker({
+            map: map,
+            position: new google.maps.LatLng(40.7505455, 23.06987730000003)
+          });
+          infowindow = new google.maps.InfoWindow({content: "<b>Σκέψη - Λέξη</b><br/>Ματαπά 11<br/>Λαγκαδάς"});
+          google.maps.event.addListener(marker, "click", function() {
+            infowindow.open(map, marker);
+          });
+          infowindow.open(map, marker);
+        }
+        google.maps.event.addDomListener(window, 'load', init_map);
+      </script>
+    </div>
+  </div>
