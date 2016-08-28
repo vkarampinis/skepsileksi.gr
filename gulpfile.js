@@ -18,7 +18,11 @@ var messages = {
  */
 gulp.task('jekyll-build', function (done) {
     browserSync.notify(messages.jekyllBuild);
-    return cp.spawn( "bundle" , ['exec', 'jekyll', 'build'], {stdio: 'inherit'})
+    return cp.spawn( "bundle" , ['exec', 'jekyll', 'build', ''], {stdio: 'inherit'})
+        .on('close', done);
+});
+gulp.task('jekyll-build-prod', function (done) {
+    return cp.spawn( "bundle" , ['exec', 'jekyll', 'build', '--config', '_config.yml,_config_production.yml'], {stdio: 'inherit'})
         .on('close', done);
 });
 
@@ -85,7 +89,7 @@ gulp.task('watch', function () {
  */
 
 gulp.task('deploy', function(done) {
-  seq('build', 'jekyll-build', 'push-gh', done);
+  seq('build', 'jekyll-build-prod', 'push-gh', done);
  });
 
 gulp.task('push-gh', function(){
