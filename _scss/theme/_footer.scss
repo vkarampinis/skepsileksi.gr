@@ -3,15 +3,27 @@ footer {
   min-height: 50px;
   margin-top: -10px;
   background-color: $color-blue;
-  padding-top: 20px;
-  img {
-    position: absolute;
+  color: #fff;
+
+  .container {
+    padding-bottom: 15px;
+    padding-top: 25px;
+  }
+  h3 {
+    font-family: $default-font;
+    font-size: 18px;
+  }
+  img.decorator {
     right: 0;
     left: 0;
     z-index: 1;
-    top: -90px;
+    margin-top: -90px;
     text-align: center;
     width: 100%;
+  }
+  img.social {
+    width: 20px;
+    height: 20px;
   }
   .row {
     min-height: 100px;
@@ -25,6 +37,12 @@ footer {
     margin: 0;
     font-size: 14px;
     text-align: center;
+  }
+  a, a:hover {
+    color: #fff;
+  }
+  li.info {
+    color: #dfeef9;
   }
 }
 #clouds path {

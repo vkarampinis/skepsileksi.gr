@@ -23,13 +23,100 @@
             M95 100 Q 100 15 105 100 Z"></path>
 </svg>
 <footer>
-  <img src="{{ 'assets/images/footer.png' | prepend: site.baseurl }}"/>
-  <div class="row">
-    <div class="col-lg-4"></div>
-    <div class="col-lg-4"></div>
-    <div class="col-lg-4"></div>
+  <img class="decorator" src="{{ 'assets/images/footer.png' | prepend: site.baseurl }}"/>
+
+  <div class="container">
+    <div class="col-md-3 col-sm-6">
+      <h3>Πλοήγηση</h3>
+      <ul class="list-unstyled">
+        <li>
+          <a href="{{ site.baseurl }}">Αρχική</a>
+        </li>
+        <li>
+          <a href="{{ 'logotherapeia' | prepend: site.baseurl }}">Λογοθεραπεία</a>
+        </li>
+        <li>
+          <a href="{{ 'ergotherapeia' | prepend: site.baseurl }}">Εργοθεραπεία</a>
+        </li>
+        <li>
+          <a href="{{ 'kentro' | prepend: site.baseurl }}">Το κέντρο μας</a>
+        </li>
+        <li>
+          <a href="{{ 'therapeutes' | prepend: site.baseurl }}">Θεραπευτές</a>
+        </li>
+        <li>
+          <a href="{{ 'contact' | prepend: site.baseurl }}">Επικοινωνία</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-md-3 col-sm-6">
+      <h3>Πληροφόρηση</h3>
+      <ul class="list-unstyled">
+        <li class="info">Πότε να συμβουλευτείτε έναν:
+          <ul class="list-unstyled">
+            <li>
+              <a href="{{ 'logotherapeia/pote_prepei_na_symvoulefteite_enan_logotherapefti' | prepend: site.baseurl }}">λογοθεραπευτή</a>
+            </li>
+            <li>
+              <a href="{{ 'ergotherapeia/pote_prepei_na_symvoulefteite_enan_ergotherapefti' | prepend: site.baseurl }}">εργοθεραπευτή</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="{{ 'logotherapeia/dikaiologitika_gia_tin_xorigisi_synedriwn_logotherapeias' | prepend: site.baseurl }}">Δικαιολογητικά για την χορήγηση συνεδριών</a>
+        </li>
+        <li>
+          <a href="{{ 'logotherapeia/syxnes_erwtiseis' | prepend: site.baseurl }}">Συχνές ερωτήσεις</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-md-3 col-sm-6 color-white">
+      <h3>Social Media</h3>
+      <ul class="list-unstyled">
+        <li class="info">Μπορείτε να μας βρείτε και στα social media</li>
+        <li class="info">
+          κάντε μας like στο
+        </li>
+        <li>
+          <a href="https://www.facebook.com/skepsileksi" target="_blank">
+          <img class="social" src="{{ 'assets/images/icon_facebook.png' | prepend: site.baseurl }}"/>
+          facebook
+          </a>
+        </li>
+        <li class="info">
+          και ακολουθήστε μας στο
+        </li>
+        <li>
+          <a href="https://twitter.com/skepsileksi" target="_blank">
+            <img class="social" src="{{ 'assets/images/icon_twitter.png' | prepend: site.baseurl }}"/>
+          twitter
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-md-3 col-sm-6 color-white">
+      <h3>Επικοινωνία</h3>
+      <ul class="list-unstyled">
+        <li class="info">Θα μας βρείτε:</li>
+        <li>
+          <address>
+            Ματαπά 11, 57200<br/>
+            Λαγκαδάς
+          </address>
+        </li>
+        <li class="info">Τηλέφωνα επικοινωνίας:</li>
+        <li>2394024555</li>
+        <li>6942414511</li>
+      </ul>
+    </div>
+
   </div>
+
   <p class="copyright">
-    Κέντρο Λογοθεραπείς και Εργοθεραπείας “Σκέψη &amp; Λέξη” © 2016.
+    “Σκέψη &amp; Λέξη” - Κέντρο Λογοθεραπείς και Εργοθεραπείας © 2016
   </p>
 </footer>
