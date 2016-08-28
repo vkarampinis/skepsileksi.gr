@@ -11,5 +11,22 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
   <link href="{{ '/assets/images/favicon.png' | prepend: site.url }}" rel='shortcut icon' type='image/x-icon' />
 
-  {% feed_meta %}
+  <!-- Open Graph data -->
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article:http://ogp.me/ns/article#">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}" />
+  <meta property="og:image" content="{{ '/assets/images/social_og.png' | prepend: site.url }}" />
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+  <meta property="og:site_name" content="{{ site.title }}" />
+  <meta property="fb:app_id" content="1610184335914741" />
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@skepsileksi">
+  <meta name="twitter:title" content="{{ site.title }}">
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="twitter:creator" content="@skepsileksi">
+  <meta name="twitter:image" content="{{ '/assets/images/social_twitter.png' | prepend: site.url }}">
+
 </head>
