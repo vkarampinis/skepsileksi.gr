@@ -112,6 +112,7 @@ gulp.task('css-vendor', function () {
     .pipe(gulp.dest('assets/css'))
     .pipe(browserSync.reload({stream:true}))
     .pipe(cssmin({ keepSpecialComments: 0 }))
+    .pipe(gulp.dest('assets/css'))
 });
 
 /*
