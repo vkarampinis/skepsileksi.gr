@@ -30,8 +30,8 @@ footer {
     margin: 0;
   }
   p.copyright {
-    height: 50px;
-    line-height: 50px;
+    min-height: 50px;
+    padding: 12px;
     background-color: $color-green;
     color: #fff;
     margin: 0;
