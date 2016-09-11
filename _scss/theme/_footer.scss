@@ -9,10 +9,12 @@ footer {
     padding-bottom: 15px;
     padding-top: 25px;
   }
+
   h3 {
     font-family: $default-font;
     font-size: 18px;
   }
+
   img.decorator {
     right: 0;
     left: 0;
@@ -21,14 +23,17 @@ footer {
     text-align: center;
     width: 100%;
   }
+
   img.social {
     width: 20px;
     height: 20px;
   }
+
   .row {
     min-height: 100px;
     margin: 0;
   }
+
   p.copyright {
     min-height: 50px;
     padding: 12px;
@@ -37,14 +42,25 @@ footer {
     margin: 0;
     font-size: 14px;
     text-align: center;
+
+    small a {
+      border-bottom: 1px dotted #fff;
+      &:hover {
+        border-bottom: 0;
+      }
+    }
   }
-  a, a:hover {
+
+  a,
+  a:hover {
     color: #fff;
   }
+
   li.info {
     color: #dfeef9;
   }
 }
+
 #clouds path {
   fill: $color-blue;
   bottom: 0;
