@@ -1,6 +1,8 @@
 # skepsileksi.gr
 Repo of www.skepsileksi.gr
 
+Hosted by: GitHub
+
 
 ## Dev
 `gem install bundler`
