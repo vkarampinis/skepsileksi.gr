@@ -3,7 +3,7 @@ Repo of www.skepsileksi.gr
 
 Hosted by: [GitHub Pages](https://www.github.com)
 
-Served by: CloudFlare
+Served by: [CloudFlare](https://www.cloudflare.com)
 
 ## Dev
 `gem install bundler`
