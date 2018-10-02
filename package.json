@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "skepsileksi.gr Website",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.3.1",
+    "jsonlylightbox": "^0.5.5"
+  },
   "devDependencies": {
     "browser-sync": "^2.13.0",
     "gulp": "^3.9.1",

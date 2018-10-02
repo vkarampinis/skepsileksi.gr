@@ -11,5 +11,3 @@ Served by: [CloudFlare](https://www.cloudflare.com)
 `bundle install`
 
 `npm install`
-
-`bower install`
