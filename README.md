@@ -1,7 +1,7 @@
 # skepsileksi.gr
 Repo of www.skepsileksi.gr
 
-Hosted by: [GitHub](https://www.github.com)
+Hosted by: [GitHub Pages](https://www.github.com)
 
 Served by: CloudFlare
 
