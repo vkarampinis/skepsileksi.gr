@@ -104,8 +104,8 @@ gulp.task('push-gh', function(){
 gulp.task('css-vendor', function () {
 
     return gulp.src([
-            './bower_components/bootstrap/dist/css/bootstrap.css',
-            './bower_components/jsonlylightbox/css/lightbox.css'
+            './node_modules/bootstrap/dist/css/bootstrap.css',
+            './node_modules/jsonlylightbox/css/lightbox.css'
         ])
     .pipe(concat("vendors.min.css"))
     .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
@@ -120,9 +120,9 @@ gulp.task('css-vendor', function () {
  */
 gulp.task('js-vendor', function () {
     return gulp.src([
-            './bower_components/jquery/dist/jquery.js',
-            './bower_components/bootstrap/dist/js/bootstrap.js',
-            './bower_components/jsonlylightbox/js/lightbox.js'
+            './node_modules/jquery/dist/jquery.js',
+            './node_modules/bootstrap/dist/js/bootstrap.js',
+            './node_modules/jsonlylightbox/js/lightbox.js'
         ])
         .pipe(concat('vendors.min.js'))
         .pipe(uglify())
