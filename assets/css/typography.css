@@ -1,3 +1,4 @@
+/* purgecss start ignore */
 @font-face {
   font-family: "IEP Comic";
   src: url("../fonts/IEPComic.woff2") format("woff2"),
@@ -6,3 +7,14 @@
   font-style: normal;
   font-display: swap;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-header;
+}
+
+/* purgecss end ignore */
