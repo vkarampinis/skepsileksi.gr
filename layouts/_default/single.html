@@ -1,0 +1,12 @@
+{{ define "main" }}
+<article>
+  <div
+    class="block text-sm tracking-widest text-gray-500 uppercase font-header"
+  >
+    <time>{{ dateFormat "Jan 2, 2006" .Date }}</time>
+    <span> // {{ .Page.WordCount}} words</span>
+  </div>
+  <h2 class="mt-0">{{ .Title }}</h2>
+  {{ .Content }}
+</article>
+{{ end }}
