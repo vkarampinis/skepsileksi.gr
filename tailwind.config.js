@@ -31,6 +31,11 @@ module.exports = {
   plugins: [typography],
   theme: {
     extend: {
+      colors: {
+        my: {
+          blue: "#2796d8",
+        },
+      },
       fontFamily: {
         body: [...theme.fontFamily.sans],
         header: ["IEP Comic", ...theme.fontFamily.sans],
