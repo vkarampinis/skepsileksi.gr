@@ -1,6 +1,9 @@
 const theme = require("tailwindcss/defaultTheme");
 module.exports = {
-  content: ["./layouts/**/*.html"],
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       colors: {
@@ -13,7 +16,7 @@ module.exports = {
         DEFAULT: {
           css: {
             color: "#333",
-            h2: {
+            "h1, h2, h3, h4, h5, h6": {
               color: t("colors.pink.600"),
             },
             a: {

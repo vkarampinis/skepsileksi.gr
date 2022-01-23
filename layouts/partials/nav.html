@@ -1,9 +1,0 @@
-<nav class="flex justify-end mt-4">
-  {{ $currentPage := . }} {{ range .Site.Menus.main }}
-  <a
-    class="px-4 py-2 mx-2 text-gray-700 rounded-lg hover:text-white hover:bg-my-blue font-header"
-    href="{{ .URL }}"
-    >{{ .Name }}</a
-  >
-  {{ end }}
-</nav>

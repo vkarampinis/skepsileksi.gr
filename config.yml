@@ -1,8 +1,0 @@
-baseURL: https://example.org
-build:
-  writeStats: true
-
-module:
-  hugoVersion:
-    extended: false
-    min: 0.80.0
