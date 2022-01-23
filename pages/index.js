@@ -10,7 +10,7 @@ export default function Home() {
 
 function Welcome() {
   return (
-    <div className="container max-w-6xl mx-auto md:flex">
+    <div className="md:flex">
       <div className="md:flex-initial">
         <img
           className="mb-6 lg:pt-5"
