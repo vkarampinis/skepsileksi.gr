@@ -1,8 +1,10 @@
+import clsx from "clsx";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Header() {
   return (
-    <div className="pt-4">
+    <div className="pt-4 mb-20">
       <div className="flex max-w-6xl mx-auto">
         <div className="flex-none w-72">
           <Logo />
@@ -18,7 +20,9 @@ export default function Header() {
 function Logo() {
   return (
     <Link href="/" passHref>
-      <img src="images/logo.png" alt="Logo" />
+      <a>
+        <img src="images/logo.png" alt="Logo" />
+      </a>
     </Link>
   );
 }
@@ -26,15 +30,29 @@ function Logo() {
 function Nav() {
   return (
     <nav className="flex justify-end mt-4">
-      <NavItem href="/">Αρχική</NavItem>
+      <NavItem href="/">🏠 Αρχική</NavItem>
+      <NavItem href="/about">👧🏻 Μαρία</NavItem>
+      <NavItem href="/ypiresies">📚 Υπηρεσίες</NavItem>
+      <NavItem href="/arthra">📰 Άρθρα</NavItem>
+      <NavItem href="/contact">📞 Επικοινωνία</NavItem>
     </nav>
   );
 }
 
 function NavItem({ href = "#", children }) {
+  const router = useRouter();
+  const isActive = router.asPath === href;
   return (
     <Link href={href} passHref>
-      <a className="px-4 py-2 mx-2 rounded-lg text-grey-700 hover:text-white hover:bg-my-blue font-header">
+      <a
+        className={clsx(
+          "px-4 py-2 mx-2 rounded-lg  hover:text-white hover:bg-my-blue font-header",
+          {
+            "text-grey-700": !isActive,
+            "text-pink-600": isActive,
+          }
+        )}
+      >
         {children}
       </a>
     </Link>
