@@ -30,11 +30,13 @@ function Logo() {
 function Nav() {
   return (
     <nav className="flex justify-end mt-4">
-      <NavItem href="/">🏠 Αρχική</NavItem>
-      <NavItem href="/about">👧🏻 Μαρία</NavItem>
-      <NavItem href="/ypiresies">📚 Υπηρεσίες</NavItem>
-      <NavItem href="/arthra">📰 Άρθρα</NavItem>
-      <NavItem href="/contact">📞 Επικοινωνία</NavItem>
+      <NavItem href="/">Αρχική</NavItem>
+      <NavItem href="/teletherapy">Τηλεθεραπεία</NavItem>
+      <NavItem href="/logotherapy">Λογοθεραπεία</NavItem>
+      <NavItem href="/about">Μαρία</NavItem>
+      <NavItem href="/plirofories">Χρήσ. Πληροφορίες</NavItem>
+      <NavItem href="/arthra">Άρθρα</NavItem>
+      <NavItem href="/contact">Επικοινωνία</NavItem>
     </nav>
   );
 }
