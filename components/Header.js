@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 export default function Header() {
   return (
-    <div className="pt-4 mb-20">
+    <div className="pt-4 mb-4">
       <div className="flex max-w-6xl mx-auto">
         <div className="flex-none w-72">
           <Logo />
