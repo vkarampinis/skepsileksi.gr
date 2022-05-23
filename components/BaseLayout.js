@@ -12,7 +12,7 @@ export default function BaseLayout({ title = "Λογοθεραπεία", childre
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <div className="flex-grow w-full max-w-6xl mx-auto">{children}</div>
+      <div className="flex-grow w-full mx-auto">{children}</div>
       <Footer />
     </Body>
   );
