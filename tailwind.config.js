@@ -34,7 +34,7 @@ module.exports = {
       }),
       fontFamily: {
         body: [...theme.fontFamily.sans],
-        header: ["IEP Comic", ...theme.fontFamily.sans],
+        header: ["Ubuntu", "IEP Comic", ...theme.fontFamily.sans],
       },
     },
   },
