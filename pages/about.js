@@ -3,7 +3,7 @@ import BaseLayout from "../components/BaseLayout";
 export default function Home() {
   return (
     <BaseLayout>
-      <article class="mx-auto prose max-w-none lg:prose-xl">
+      <article className="mx-auto prose max-w-none lg:prose-xl">
         <h2>Ας συστηθούμε</h2>
         <p>
           Ονομάζομαι Αποστολάκη Μαρία και είμαι απόφοιτος του τμήματος
