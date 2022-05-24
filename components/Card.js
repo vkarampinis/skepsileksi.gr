@@ -11,7 +11,7 @@ export default function Card({ children }) {
 export function CardItem({ children }) {
   return (
     <div className="py-4 text-color-white">
-      <CheckIcon className="inline-block" />
+      <CheckIcon className="inline-block w-10" />
       <span className="pl-4 font-bold">{children}</span>
     </div>
   );
