@@ -4,9 +4,9 @@ import { useRouter } from "next/router";
 
 export default function Header() {
   return (
-    <div className="pt-4 mb-4">
-      <div className="flex max-w-6xl mx-auto">
-        <div className="flex-none w-72">
+    <div className="bg-color-1">
+      <div className="flex items-center max-w-6xl mx-auto">
+        <div className="flex-none h-32 py-2">
           <Logo />
         </div>
         <div className="flex-1 flex-grow">
@@ -20,8 +20,8 @@ export default function Header() {
 function Logo() {
   return (
     <Link href="/" passHref>
-      <a>
-        <img src="images/logo.png" alt="Logo" />
+      <a className="align-middle ">
+        <img src="images/logo.png" width={180} alt="Logo" />
       </a>
     </Link>
   );
@@ -29,14 +29,12 @@ function Logo() {
 
 function Nav() {
   return (
-    <nav className="flex justify-end mt-4">
-      <NavItem href="/">Αρχική</NavItem>
+    <nav className="flex justify-end mt-4 mb-4">
       <NavItem href="/teletherapy">Τηλεθεραπεία</NavItem>
+      <NavItem href="/logotherapy">Καθοδήγηση</NavItem>
       <NavItem href="/logotherapy">Λογοθεραπεία</NavItem>
-      <NavItem href="/about">Μαρία</NavItem>
-      <NavItem href="/plirofories">Χρήσ. Πληροφορίες</NavItem>
+      <NavItem href="/about">Ας συστηθούμε</NavItem>
       <NavItem href="/arthra">Άρθρα</NavItem>
-      <NavItem href="/contact">Επικοινωνία</NavItem>
     </nav>
   );
 }
@@ -46,17 +44,18 @@ function NavItem({ href = "#", children }) {
   const isActive = router.asPath === href;
   return (
     <Link href={href} passHref>
-      <a
-        className={clsx(
-          "px-4 py-2 mx-2 rounded-lg  hover:text-white hover:bg-my-blue font-header",
-          {
-            "text-grey-700": !isActive,
-            "text-pink-600": isActive,
-          }
-        )}
-      >
-        {children}
-      </a>
+      <span className="mx-2">
+        <a
+          className={clsx(
+            "whitespace-nowrap px-2 py-2 text-color-white hover:cursor-pointer  hover:bg-color-2 font-header",
+            {
+              "bg-color-2": isActive,
+            }
+          )}
+        >
+          {children}
+        </a>
+      </span>
     </Link>
   );
 }
