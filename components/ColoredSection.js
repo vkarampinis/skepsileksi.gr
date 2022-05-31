@@ -29,7 +29,7 @@ export default function ColoredSection({
           >
             {icon}
           </div>
-          <div className="basis-full sm:basis-4/5">
+          <div className="prose prose-xl basis-full sm:basis-4/5">
             <H size={2} className="text-color-white">
               {title}
             </H>

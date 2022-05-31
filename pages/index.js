@@ -63,19 +63,17 @@ function Benefits() {
     <div className="flex flex-col max-w-6xl mx-auto py-14 md:flex-row">
       <div className="md:basis-4/6 basis-full">
         <div className="flex">
-          <div className="px-4 basis-10/12">
-            <H size={3}>Έχεις παρατηρήσει κάποια δυσκολία</H>
-            <ul className="list-disc list-inside ">
-              <li className="pb-4">στην άρθρωση των ήχων ή των γραμμάτων</li>
-              <li className="pb-4">
-                στην παραγωγή ολοκληρωμένης και σωστά δομημένης πρότασης
-              </li>
-              <li className="pb-4">
-                στο να γίνεται κατανοητός ο λόγος του από τρίτους
-              </li>
-              <li className="pb-4">στο να κατανοεί απλές οδηγίες</li>
-              <li className="pb-4">στο να εμπλουτίζεται το λεξιλόγιό του</li>
-              <li className="pb-4">
+          <div className="prose prose-xl basis-10/12">
+            <H size={3} className="px-4">
+              Έχεις παρατηρήσει κάποια δυσκολία
+            </H>
+            <ul className="list-disc list-outside ">
+              <li>στην άρθρωση των ήχων ή των γραμμάτων</li>
+              <li>στην παραγωγή ολοκληρωμένης και σωστά δομημένης πρότασης</li>
+              <li>στο να γίνεται κατανοητός ο λόγος του από τρίτους</li>
+              <li>στο να κατανοεί απλές οδηγίες</li>
+              <li>στο να εμπλουτίζεται το λεξιλόγιό του</li>
+              <li>
                 στο να εκφραστεί με ευκολία και ανάλογα με τις περιστάσεις
               </li>
             </ul>
@@ -95,7 +93,7 @@ function Benefits() {
 function Services() {
   return (
     <Card>
-      <H size={3} className="text-white">
+      <H size={3} className="py-4 text-white">
         Υπηρεσίες που παρέχονται
       </H>
       <CardItem>Τηλεθεραπεία σε παιδιά</CardItem>
@@ -163,7 +161,7 @@ function AdvantageItem({ title, icon, children }) {
   return (
     <div className="flex py-6">
       <div className="flex-none px-2 py-6 sm:p-6 ">{icon}</div>
-      <div className="grow">
+      <div className="prose prose-xl grow">
         <H size={3}>
           <Highlight className="py-1" textClass="text-color-white px-4">
             {title}
