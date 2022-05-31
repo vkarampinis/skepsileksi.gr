@@ -12,7 +12,7 @@ const headerClassMap = {
 export default function H({ size, className = "", children }) {
   return React.createElement(
     `h${size}`,
-    { className: `${headerClassMap[size]} font-bold py-6 ${className}` },
+    { className: `${headerClassMap[size]} font-bold ${className}` },
     children
   );
 }
