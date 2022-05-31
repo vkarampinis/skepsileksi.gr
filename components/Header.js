@@ -56,7 +56,7 @@ function NavItem({ href = "#", children }) {
       <span className="block sm:inline-block sm:mx-2">
         <a
           className={clsx(
-            "whitespace-nowrap px-4 py-2 border-t sm:border-0 border-color-2 w-full block sm:px-2 sm:text-xs text-lg md:text-base lg:text-xl text-color-white hover:cursor-pointer hover:bg-color-2 font-header",
+            "whitespace-nowrap px-4 py-2 border-b sm:border-0 border-color-2 w-full block sm:px-2 sm:text-xs text-lg md:text-base lg:text-xl text-color-white hover:cursor-pointer hover:bg-color-2 font-header",
             {
               "bg-color-2": isActive,
             }
