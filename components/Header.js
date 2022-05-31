@@ -30,7 +30,7 @@ function Logo() {
   return (
     <Link href="/" passHref>
       <a>
-        <img src="images/logo.png" className="w-24 lg:w-44" alt="Logo" />
+        <img src="/images/logo.png" className="w-24 lg:w-44" alt="Logo" />
       </a>
     </Link>
   );

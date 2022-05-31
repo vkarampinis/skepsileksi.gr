@@ -8,7 +8,7 @@ export default function CTALink({
   children,
 }) {
   return (
-    <div className="px-4 py-6 bg-color-1">
+    <section className="px-4 py-6 my-8 bg-color-1">
       <div className="flex flex-col items-center max-w-6xl mx-auto sm:flex-row">
         <div className="prose prose-xl sm:basis-4/5">
           <H size={3} className="text-color-white">
@@ -22,6 +22,6 @@ export default function CTALink({
           </Button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

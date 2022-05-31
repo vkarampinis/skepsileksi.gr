@@ -3,7 +3,7 @@ import Button from "./Button";
 export default function CTA({ link, pink, linkText, children }) {
   let color = pink ? "bg-color-3" : "bg-color-1";
   return (
-    <div className={`py-8 ${color}`}>
+    <section className={`py-8 ${color}`}>
       <div className="flex flex-row max-w-6xl mx-auto">
         <p className="z-10 block px-4 py-2 font-bold text-center basis-full text-color-white lg:basis-5/6 ">
           <span className="block lg:inline-block">{children}</span>
@@ -14,6 +14,6 @@ export default function CTA({ link, pink, linkText, children }) {
           </div>
         </p>
       </div>
-    </div>
+    </section>
   );
 }

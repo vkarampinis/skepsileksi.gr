@@ -60,7 +60,7 @@ function Hero() {
 
 function Benefits() {
   return (
-    <div className="flex flex-col max-w-6xl mx-auto py-14 md:flex-row">
+    <section className="flex flex-col max-w-6xl mx-auto py-14 md:flex-row">
       <div className="md:basis-4/6 basis-full">
         <div className="flex">
           <div className="prose prose-xl basis-10/12">
@@ -86,7 +86,7 @@ function Benefits() {
       <div className="sm:px-28 md:px-0 md:basis-2/6 basis-full">
         <Services />
       </div>
-    </div>
+    </section>
   );
 }
 
