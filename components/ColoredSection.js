@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import H from "./H";
 
 export default function ColoredSection({
@@ -16,12 +17,19 @@ export default function ColoredSection({
     <section
       className={`relative before:block before:absolute before:inset-0 before:bottom-12 before:-skew-y-3 before:${bgColor} ${className}`}
     >
-      <div className={`relative p-20 ${fgColor}`}>
+      <div className={`relative p-6 sm:p-20 ${fgColor}`}>
         <div className={`flex max-w-6xl mx-auto ${order}`}>
-          <div className="flex items-center justify-center basis-1/3">
+          <div
+            className={clsx(
+              "hidden align-top sm:items-start sm:flex sm:basis-1/5",
+              {
+                "sm:justify-end": left,
+              }
+            )}
+          >
             {icon}
           </div>
-          <div className="basis-2/3">
+          <div className="basis-full sm:basis-4/5">
             <H size={2} className="text-color-white">
               {title}
             </H>
