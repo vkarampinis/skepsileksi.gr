@@ -1,7 +1,9 @@
 import BaseLayout from "../components/BaseLayout";
+import ContactSection from "../components/ContactSection";
 import CTALink from "../components/CTALink";
 import H from "../components/H";
 import TextSection from "../components/TextSection";
+import links from "../config/links";
 
 export default function Teletherapy() {
   return (
@@ -26,7 +28,7 @@ export default function Teletherapy() {
           <li>ήσυχο περιβάλλον</li>
         </ul>
       </TextSection>
-      <CTALink title="Λογοθεραπεία" link="/about">
+      <CTALink title="Λογοθεραπεία" link={links.Logotherapia}>
         Πρόληψη, διάγνωση και αντιμετώπιση των διαταραχών του λόγου, της ομιλίας
         και της φωνής
       </CTALink>
@@ -52,7 +54,7 @@ export default function Teletherapy() {
           εξέλιξή του.
         </p>
       </TextSection>
-      <CTALink title="Καθοδήγηση γονέα" link="/kathodigisi">
+      <CTALink title="Καθοδήγηση γονέα" link={links.Kathodigisi}>
         Η θεραπεία από μόνη της δεν είναι αρκετή
       </CTALink>
       <TextSection>
@@ -74,6 +76,7 @@ export default function Teletherapy() {
           δικές σου.
         </p>
       </TextSection>
+      <ContactSection />
     </BaseLayout>
   );
 }

@@ -1,7 +1,9 @@
 import BaseLayout from "../components/BaseLayout";
+import ContactSection from "../components/ContactSection";
 import CTA from "../components/CTA";
 import H from "../components/H";
 import TextSection from "../components/TextSection";
+import links from "../config/links";
 
 export default function Kathodigisi() {
   return (
@@ -30,7 +32,7 @@ export default function Kathodigisi() {
           διαχειριστείς και να κατανοήσεις σε βάθος τις ανάγκες του παιδιού σου.
         </p>
       </TextSection>
-      <CTA title="" link="/about" linkText={"κλείσε ραντεβού"}>
+      <CTA link={links.Contact} linkText={"κλείσε ραντεβού"}>
         Η κάθε μέρα είναι ευκαιρία για να μάθεις κάτι καινούριο
       </CTA>
       <TextSection>
@@ -63,6 +65,7 @@ export default function Kathodigisi() {
           ανάπτυξης του λόγου και της ομιλίας του.
         </p>
       </TextSection>
+      <ContactSection />
     </BaseLayout>
   );
 }
