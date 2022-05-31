@@ -17,7 +17,7 @@ export default function ColoredSection({
     <section
       className={`relative before:block before:absolute before:inset-0 before:bottom-12 before:-skew-y-3 before:${bgColor} ${className}`}
     >
-      <div className={`relative p-6 sm:p-20 ${fgColor}`}>
+      <div className={`relative p-6 md:p-16 ${fgColor}`}>
         <div className={`flex max-w-6xl mx-auto ${order}`}>
           <div
             className={clsx(
