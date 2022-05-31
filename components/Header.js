@@ -2,6 +2,7 @@ import clsx from "clsx";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
+import links from "../config/links";
 
 export default function Header() {
   const [menuIsHidden, setMenuIsHidden] = useState(true);
@@ -38,11 +39,11 @@ function Logo() {
 function Nav({ className }) {
   return (
     <nav className={` ${className}`}>
-      <NavItem href="/teletherapy">Τηλεθεραπεία</NavItem>
-      <NavItem href="/kathodigisi">Καθοδήγηση</NavItem>
-      <NavItem href="/logotherapy">Λογοθεραπεία</NavItem>
-      <NavItem href="/about">Ας συστηθούμε</NavItem>
-      <NavItem href="/arthra">Άρθρα</NavItem>
+      <NavItem href={links.Tiletherapia}>Τηλεθεραπεία</NavItem>
+      <NavItem href={links.Kathodigisi}>Καθοδήγηση</NavItem>
+      <NavItem href={links.Logotherapia}>Λογοθεραπεία</NavItem>
+      <NavItem href={links.About}>Ας συστηθούμε</NavItem>
+      <NavItem href={links.Arthra}>Άρθρα</NavItem>
     </nav>
   );
 }
