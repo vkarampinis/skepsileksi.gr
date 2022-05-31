@@ -53,8 +53,8 @@ function NavItem({ href = "#", children }) {
   const isActive = router.asPath === href;
 
   return (
-    <Link href={href} passHref>
-      <span className="block sm:inline-block sm:mx-2">
+    <span className="block sm:inline-block sm:mx-2">
+      <Link href={href} passHref>
         <a
           className={clsx(
             "whitespace-nowrap px-4 py-2 border-b sm:border-0 border-color-2 w-full block sm:px-2 sm:text-xs text-lg md:text-base lg:text-xl text-color-white hover:cursor-pointer hover:bg-color-2 font-header",
@@ -65,8 +65,8 @@ function NavItem({ href = "#", children }) {
         >
           {children}
         </a>
-      </span>
-    </Link>
+      </Link>
+    </span>
   );
 }
 
