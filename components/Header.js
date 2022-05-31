@@ -39,7 +39,7 @@ function Nav({ className }) {
   return (
     <nav className={` ${className}`}>
       <NavItem href="/teletherapy">Τηλεθεραπεία</NavItem>
-      <NavItem href="/logotherapy">Καθοδήγηση</NavItem>
+      <NavItem href="/kathodigisi">Καθοδήγηση</NavItem>
       <NavItem href="/logotherapy">Λογοθεραπεία</NavItem>
       <NavItem href="/about">Ας συστηθούμε</NavItem>
       <NavItem href="/arthra">Άρθρα</NavItem>
