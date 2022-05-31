@@ -11,10 +11,10 @@ export default function ColoredSection({
   const fgColor = pink ? "bg-color-3" : "bg-color-1";
   const bgColor = pink ? "bg-color-4" : "bg-color-2";
   const order = left ? "flex-row-reverse" : "flex-row";
-  console.log(bgColor, fgColor);
+
   return (
     <section
-      className={`relative before:block before:absolute before:inset-0 before:-right-4 before:bottom-12 before:-rotate-3 before:${bgColor} ${className}`}
+      className={`relative before:block before:absolute before:inset-0 before:bottom-12 before:-skew-y-3 before:${bgColor} ${className}`}
     >
       <div className={`relative p-20 ${fgColor}`}>
         <div className={`flex max-w-6xl mx-auto ${order}`}>
