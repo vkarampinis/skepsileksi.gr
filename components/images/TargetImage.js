@@ -1,4 +1,4 @@
-export default function TargetIcon({ className }) {
+export default function TargetImage({ className }) {
   return (
     <svg
       fill="none"

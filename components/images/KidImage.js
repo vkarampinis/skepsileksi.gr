@@ -1,4 +1,4 @@
-export default function KidIcon({ className }) {
+export default function KidImage({ className }) {
   return (
     <svg
       fill="none"
