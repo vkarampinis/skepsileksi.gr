@@ -1,18 +1,26 @@
 import clsx from "clsx";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import React, { useState } from "react";
 
 export default function Header() {
+  const [menuIsHidden, setMenuIsHidden] = useState(true);
+  const onHamburgerClick = () => setMenuIsHidden(!menuIsHidden);
+
   return (
     <div className="bg-color-1">
       <div className="flex items-center max-w-6xl mx-auto">
-        <div className="flex-none h-32 py-2">
+        <div className="flex-none px-2 py-2 xl:px-0">
           <Logo />
         </div>
-        <div className="flex-1 flex-grow">
-          <Nav />
+        <div className="flex-1 flex-grow hi1dden s1m:block i1nvisible s1m:visible">
+          <div className="flex justify-end">
+            <Nav className="hidden sm:block" />
+            <Hamburger className="block sm:hidden" onClick={onHamburgerClick} />
+          </div>
         </div>
       </div>
+      <MobileMenu isHidden={menuIsHidden} />
     </div>
   );
 }
@@ -20,16 +28,16 @@ export default function Header() {
 function Logo() {
   return (
     <Link href="/" passHref>
-      <a className="align-middle ">
-        <img src="images/logo.png" width={180} alt="Logo" />
+      <a>
+        <img src="images/logo.png" className="w-24 lg:w-44" alt="Logo" />
       </a>
     </Link>
   );
 }
 
-function Nav() {
+function Nav({ className }) {
   return (
-    <nav className="flex justify-end mt-4 mb-4">
+    <nav className={` ${className}`}>
       <NavItem href="/teletherapy">Τηλεθεραπεία</NavItem>
       <NavItem href="/logotherapy">Καθοδήγηση</NavItem>
       <NavItem href="/logotherapy">Λογοθεραπεία</NavItem>
@@ -42,12 +50,13 @@ function Nav() {
 function NavItem({ href = "#", children }) {
   const router = useRouter();
   const isActive = router.asPath === href;
+
   return (
     <Link href={href} passHref>
-      <span className="mx-2">
+      <span className="block sm:inline-block sm:mx-2">
         <a
           className={clsx(
-            "whitespace-nowrap px-2 py-2 text-color-white hover:cursor-pointer  hover:bg-color-2 font-header",
+            "whitespace-nowrap px-4 py-2 border-t sm:border-0 border-color-2 w-full block sm:px-2 sm:text-xs text-lg md:text-base lg:text-xl text-color-white hover:cursor-pointer hover:bg-color-2 font-header",
             {
               "bg-color-2": isActive,
             }
@@ -57,5 +66,32 @@ function NavItem({ href = "#", children }) {
         </a>
       </span>
     </Link>
+  );
+}
+
+function Hamburger({ className, onClick }) {
+  return (
+    <div className={`${className}`}>
+      <button
+        type="button"
+        className="p-4 space-y-2 cursor-pointer"
+        onClick={onClick}
+      >
+        <div className="w-8 bg-white h-0.5"></div>
+        <div className="w-8 bg-white h-0.5"></div>
+        <div className="w-8 bg-white h-0.5"></div>
+      </button>
+    </div>
+  );
+}
+function MobileMenu({ isHidden }) {
+  return (
+    <div
+      className={clsx("w-full sm:hidden", {
+        hidden: isHidden,
+      })}
+    >
+      <Nav />
+    </div>
   );
 }
