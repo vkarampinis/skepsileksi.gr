@@ -12,5 +12,9 @@ const links = {
   Autismos: "/logotherapia/autismos",
   Traulismos: "/logotherapia/traulismos",
   EidikesMathisiakesDiskolies: "/logotherapia/eidikes_mathisiakes_diskolies",
+  FysiologikiAnaptiksiTouLogou: "/logotherapia/fysiologiki_anaptiksi_tou_logou",
+  ProtiSinantisi: "/logotherapia/proti_sinantisi",
+  SichnotitaSinedrion: "/logotherapia/sichnotita_sinedrion",
+  SichnesErotisis: "/logotherapia/sichnes_erotisis",
 };
 export default links;
