@@ -9,10 +9,10 @@ const headerClassMap = {
   6: "text-base",
 };
 
-export default function H({ size, className = "", children }) {
-  return React.createElement(
-    `h${size}`,
-    { className: `${headerClassMap[size]} font-bold ${className}` },
-    children
-  );
+export default function H({ size, id = "", className = "", children }) {
+  let props = { className: `${headerClassMap[size]} font-bold ${className}` };
+
+  if (id.length) props.id = id;
+
+  return React.createElement(`h${size}`, props, children);
 }
