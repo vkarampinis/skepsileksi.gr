@@ -1,8 +1,10 @@
 import Link from "next/link";
 import BaseLayout from "../../components/BaseLayout";
 import ContactSection from "../../components/ContactSection";
+import CTALink from "../../components/CTALink";
 import H from "../../components/H";
 import TextSection from "../../components/TextSection";
+import links from "../../config/links";
 
 const FAQTitles = [
   "Το 2 ετών παιδί μου εμφανίζει καθυστέρηση στην εξέλιξη της ομιλίας του. Ο παιδίατρός μου συνιστά να περιμένω ακόμα 1 χρόνο πριν κάνω κάποια ενέργεια. Θα έπρεπε να κάνω κάτι τώρα, ή να περιμένω;",
@@ -83,6 +85,9 @@ export default function Sichnes_erotisis() {
           μοιραστούν τις σκέψεις, τις ιδέες και τα συναισθήματά τους.
         </p>
       </TextSection>
+      <CTALink title="Τηλεθεραπεία" link={links.Tiletherapia}>
+        Η θεραπεία γίνεται εξ αποστάσεως μέσω του διαδικτύου
+      </CTALink>
       <ContactSection />
     </BaseLayout>
   );
