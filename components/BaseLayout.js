@@ -3,7 +3,11 @@ import Body from "./Body";
 import Footer from "./Footer";
 import Header from "./Header";
 
-export default function BaseLayout({ title = "Λογοθεραπεία", children }) {
+export default function BaseLayout({
+  title = "Λογοθεραπεία",
+  children,
+  className = "",
+}) {
   return (
     <Body>
       <Head>
@@ -12,7 +16,7 @@ export default function BaseLayout({ title = "Λογοθεραπεία", childre
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <div className="flex-grow w-full mx-auto">{children}</div>
+      <div className={`flex-grow w-full mx-auto ${className}`}>{children}</div>
       <Footer />
     </Body>
   );
