@@ -2,6 +2,7 @@ import React from "react";
 import BaseLayout from "../components/BaseLayout";
 import Card, { CardItem } from "../components/Card";
 import ColoredSection from "../components/ColoredSection";
+import ContactSection from "../components/ContactSection";
 import CTA from "../components/CTA";
 import H from "../components/H";
 import Highlight from "../components/Highlight";
@@ -15,17 +16,18 @@ export default function Home() {
   return (
     <BaseLayout>
       <Hero />
-      <CTA link={"#"} linkText="κλείσε ραντεβού" pink>
+      <CTA link={"#contact-form"} linkText="κλείσε ραντεβού" pink>
         Ανεξάρτητα από το πού μένεις, η βοήθεια είναι πάντα δίπλα σου!
       </CTA>
       <Benefits />
       <Target />
       <Advantages />
       <Together />
-      <CTA link={"#"} linkText="κλείσε ραντεβού">
-        Η θεραπεία που γίνεται εξ αποστάσεως μέσω του διαδικτύου
+      <CTA link={"#contact-form"} linkText="κλείσε ραντεβού">
+        Η θεραπεία γίνεται εξ αποστάσεως μέσω του διαδικτύου
       </CTA>
       <WhatYouNeed />
+      <ContactSection />
     </BaseLayout>
   );
 }
@@ -35,13 +37,13 @@ function Hero() {
     <section className="px-4 py-20 sm:px-4 bg-color-1">
       <div className="relative flex flex-row max-w-6xl mx-auto">
         <div className="basis-full sm:basis-3/5">
-          <h1 className="mb-16 text-4xl font-bold uppercase md:text-5xl sm:px-4 lg:text-6xl font-header text-color-white">
+          <h1 className="px-4 mb-16 text-4xl font-bold uppercase md:text-5xl lg:text-6xl font-header text-color-white">
             Online
             <span className="block mt-4">
               <Highlight>Λογοθεραπεια</Highlight>
             </span>
           </h1>
-          <p className="max-w-md leading-10 text-color-white">
+          <p className="max-w-md px-4 leading-10 text-color-white">
             Βοηθώντας τα παιδιά να βρουν τις{" "}
             <span className="italic font-bold">λέξεις</span> τους ώστε στο
             μέλλον οι <span className="italic font-bold ">σκέψεις</span> τους να
@@ -94,11 +96,11 @@ function Services() {
   return (
     <Card>
       <H size={3} className="py-4 text-white">
-        Υπηρεσίες που παρέχονται
+        Υπηρεσίες
       </H>
+      <CardItem>Αξιολόγηση</CardItem>
       <CardItem>Τηλεθεραπεία σε παιδιά</CardItem>
       <CardItem>Καθοδήγηση γονέων</CardItem>
-      <CardItem>Αξιολόγηση</CardItem>
     </Card>
   );
 }
