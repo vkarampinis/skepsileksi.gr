@@ -14,6 +14,7 @@ export default function BaseLayout({
       <NextSeo
         title={title}
         titleTemplate="%s • Σκέψη - Λέξη"
+        description="Online Τηλεθεραπεία • Σκέψη - Λέξη"
         openGraph={{
           type: "website",
           url: "https://skepsileksi.gr",
@@ -31,8 +32,6 @@ export default function BaseLayout({
         }}
       />
       <Head>
-        <title>{title}</title>
-        <meta name="description" content="Online Τηλεθεραπεία • Σκέψη - Λέξη" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
