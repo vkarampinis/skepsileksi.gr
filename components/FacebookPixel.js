@@ -25,7 +25,7 @@ export default function FacebookPixel() {
           <img
             height="1"
             width="1"
-            style="display:none"
+            className="hidden"
             alt=""
             src="https://www.facebook.com/tr?id=3969841066573903&ev=PageView&noscript=1"
           />
