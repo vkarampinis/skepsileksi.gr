@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "IEP Comic";
+  src: url("../public/fonts/IEPComic.woff2") format("woff2"),
+    url("../public/fonts/IEPComic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-color-black font-header;
+}

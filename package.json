@@ -1,35 +1,36 @@
 {
-  "name": "skepsileksi.gr",
-  "version": "1.0.0",
-  "description": "skepsileksi.gr Website",
+  "name": "aaa",
   "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev-blog": "next-remote-watch ./articles",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "dependencies": {
-    "bootstrap": "^3.3.7",
-    "jquery": "^3.3.1",
-    "jsonlylightbox": "^0.5.5"
+    "@fontsource/ubuntu": "^4.5.9",
+    "gray-matter": "^4.0.3",
+    "next": "^12.1.4",
+    "next-compose-plugins": "^2.2.1",
+    "next-mdx-remote": "^4.0.3",
+    "next-seo": "^5.4.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.13.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-cssmin": "^0.1.7",
-    "gulp-gh-pages": "^0.5.4",
-    "gulp-sass": "^2.3.2",
-    "gulp-uglify": "^1.5.4",
-    "run-sequence": "^1.2.2"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vkarampinis/skepsileksi.gr.git"
-  },
-  "author": "Vaios Karampinis <oden@oden.gr>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/vkarampinis/skepsileksi.gr/issues"
-  },
-  "homepage": "https://github.com/vkarampinis/skepsileksi.gr#readme"
+    "@tailwindcss/typography": "^0.5.2",
+    "autoprefixer": "^10.4.4",
+    "clsx": "^1.1.1",
+    "eslint": "^8.7.0",
+    "eslint-config-next": "12.1.6",
+    "mime-types": "^2.1.35",
+    "next-optimized-images": "^2.6.2",
+    "next-remote-watch": "^1.0.0",
+    "postcss": "^8.4.12",
+    "responsive-loader": "^2.3.0",
+    "sharp": "^0.30.6",
+    "tailwindcss": "^3.0.23",
+    "webp-loader": "^0.6.0"
+  }
 }
