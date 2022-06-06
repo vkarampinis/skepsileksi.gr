@@ -9,7 +9,7 @@ export default function Index({ articles }) {
   return (
     <BaseLayout>
       <TextSection>
-        <H size={3}>Άρθρα</H>
+        <H size={2}>Άρθρα</H>
         {articles.map((article) => (
           <Article key={article.title} {...article} />
         ))}
