@@ -3,11 +3,7 @@ import Body from "./Body";
 import Footer from "./Footer";
 import Header from "./Header";
 
-export default function BaseLayout({
-  title = "Λογοθεραπεία",
-  children,
-  className = "",
-}) {
+export default function BaseLayout({ title, children, className = "" }) {
   return (
     <Body>
       <NextSeo title={title} />

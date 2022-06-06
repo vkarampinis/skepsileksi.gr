@@ -9,6 +9,7 @@ function _App({ Component, pageProps }) {
   return (
     <>
       <NextSeo
+        defaultTitle="Λογοθεραπεία"
         titleTemplate="%s • Σκέψη - Λέξη"
         description="Online Λογοθεραπεία • Σκέψη - Λέξη"
         openGraph={{
@@ -28,7 +29,6 @@ function _App({ Component, pageProps }) {
           ],
           locale: "el_GR",
         }}
-        canonical
       />
       <Head>
         <link rel="icon" href="/favicon.ico" />
