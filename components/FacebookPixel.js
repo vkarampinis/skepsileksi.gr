@@ -1,7 +1,28 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 import Script from "next/script";
+import { useEffect } from "react";
+
+const pageview = () => {
+  window.fbq("track", "PageView");
+};
 
 export default function FacebookPixel() {
+  const router = useRouter();
+
+  useEffect(() => {
+    pageview();
+
+    const handleRouteChange = () => {
+      pageview();
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
+
   return (
     <>
       <Script
@@ -25,7 +46,7 @@ export default function FacebookPixel() {
           <img
             height="1"
             width="1"
-            className="hidden"
+            style={{ display: "none" }}
             alt=""
             src="https://www.facebook.com/tr?id=3969841066573903&ev=PageView&noscript=1"
           />
