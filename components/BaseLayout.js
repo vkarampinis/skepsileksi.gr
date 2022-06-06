@@ -1,5 +1,4 @@
 import { NextSeo } from "next-seo";
-import Head from "next/head";
 import Body from "./Body";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -11,29 +10,7 @@ export default function BaseLayout({
 }) {
   return (
     <Body>
-      <NextSeo
-        title={title}
-        titleTemplate="%s • Σκέψη - Λέξη"
-        description="Online Τηλεθεραπεία • Σκέψη - Λέξη"
-        openGraph={{
-          type: "website",
-          url: "https://skepsileksi.gr",
-          title: "Online Τηλεθεραπεία • Σκέψη - Λέξη",
-          description:
-            "Βοηθώντας τα παιδιά να βρουν τις λέξεις τους ώστε στο μέλλον οι σκέψεις τους να πάρουν μορφή… μέσω της τηλεθεραπείας",
-          images: [
-            {
-              url: "https://skepsileksi.gr/images/og-image.jpeg",
-              width: 1200,
-              height: 630,
-              alt: "Online Τηλεθεραπεία • Σκέψη - Λέξη",
-            },
-          ],
-        }}
-      />
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <NextSeo title={title} />
       <Header />
       <div className={`flex-grow w-full mx-auto ${className}`}>{children}</div>
       <Footer />
