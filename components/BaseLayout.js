@@ -1,7 +1,6 @@
 import { NextSeo } from "next-seo";
 import Head from "next/head";
 import Body from "./Body";
-import FacebookPixel from "./FacebookPixel";
 import Footer from "./Footer";
 import Header from "./Header";
 
@@ -38,7 +37,6 @@ export default function BaseLayout({
       <Header />
       <div className={`flex-grow w-full mx-auto ${className}`}>{children}</div>
       <Footer />
-      <FacebookPixel />
     </Body>
   );
 }
