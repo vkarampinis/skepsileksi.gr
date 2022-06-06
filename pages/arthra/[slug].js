@@ -11,7 +11,6 @@ import utils from "../../utils/blog";
 const Article = ({ source, frontMatter }) => {
   const router = useRouter();
   const { slug } = router.query;
-  console.log(frontMatter, slug);
 
   return (
     <BaseLayout title={frontMatter.title}>
