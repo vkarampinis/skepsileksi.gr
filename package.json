@@ -5,6 +5,7 @@
     "dev": "next dev",
     "dev-blog": "next-remote-watch ./articles",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },
@@ -27,6 +28,7 @@
     "mime-types": "^2.1.35",
     "next-optimized-images": "^2.6.2",
     "next-remote-watch": "^1.0.0",
+    "next-sitemap": "^3.0.5",
     "postcss": "^8.4.12",
     "responsive-loader": "^2.3.0",
     "sharp": "^0.30.6",
