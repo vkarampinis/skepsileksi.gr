@@ -22,7 +22,7 @@ export default function BaseLayout({
             "Βοηθώντας τα παιδιά να βρουν τις λέξεις τους ώστε στο μέλλον οι σκέψεις τους να πάρουν μορφή… μέσω της τηλεθεραπείας",
           images: [
             {
-              url: "https://skepsileksi.gr/og-image.jpeg",
+              url: "https://skepsileksi.gr/images/og-image.jpeg",
               width: 1200,
               height: 630,
               alt: "Online Τηλεθεραπεία • Σκέψη - Λέξη",
