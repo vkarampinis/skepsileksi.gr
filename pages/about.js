@@ -5,7 +5,7 @@ import H from "../components/H";
 import TextSection from "../components/TextSection";
 import links from "../config/links";
 
-export default function Home() {
+export default function About() {
   return (
     <BaseLayout>
       <TextSection>

@@ -5,7 +5,7 @@ import H from "../components/H";
 import TextSection from "../components/TextSection";
 import links from "../config/links";
 
-export default function Teletherapy() {
+export default function Tiletherapia() {
   return (
     <BaseLayout>
       <TextSection>
