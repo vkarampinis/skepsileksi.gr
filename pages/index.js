@@ -47,9 +47,7 @@ function Hero() {
             Βοηθώντας τα παιδιά να βρουν τις{" "}
             <span className="italic font-bold">λέξεις</span> τους ώστε στο
             μέλλον οι <span className="italic font-bold ">σκέψεις</span> τους να
-            πάρουν μορφή…
-            <br />
-            μέσω της <Highlight>τηλεθεραπείας</Highlight>
+            πάρουν μορφή μέσω της <Highlight>τηλεθεραπείας</Highlight>
           </p>
         </div>
         <div className="sm:basis-2/5">
