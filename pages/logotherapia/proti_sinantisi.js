@@ -5,7 +5,7 @@ import TextSection from "../../components/TextSection";
 
 export default function ProtiSinantisi() {
   return (
-    <BaseLayout>
+    <BaseLayout title="Πρώτη συνάντηση">
       <TextSection>
         <H size={2}>Πρώτη συνάντηση</H>
         <p>

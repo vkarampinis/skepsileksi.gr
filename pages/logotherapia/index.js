@@ -8,7 +8,7 @@ import links from "../../config/links";
 
 export default function Logotherapia() {
   return (
-    <BaseLayout>
+    <BaseLayout title="Λογοθεραπεία">
       <TextSection>
         <H size={2}>Λογοθεραπεία</H>
         <p>

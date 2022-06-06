@@ -5,7 +5,7 @@ import TextSection from "../../components/TextSection";
 
 export default function Autismos() {
   return (
-    <BaseLayout>
+    <BaseLayout title="Διάχυτη αναπτυξιακή διαταραχή (αυτισμός)">
       <TextSection>
         <H size={2}>Διάχυτη αναπτυξιακή διαταραχή (αυτισμός)</H>
         <H size={3}>Εικόνα παιδιού</H>

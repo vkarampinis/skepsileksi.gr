@@ -5,7 +5,7 @@ import TextSection from "../../components/TextSection";
 
 export default function DiatarachesArthrosis() {
   return (
-    <BaseLayout>
+    <BaseLayout title="Διαταραχές άρθρωσης">
       <TextSection>
         <H size={2}>Διαταραχές άρθρωσης</H>
         <H size={3}>Εικόνα παιδιού</H>

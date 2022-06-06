@@ -7,7 +7,7 @@ import links from "../config/links";
 
 export default function About() {
   return (
-    <BaseLayout>
+    <BaseLayout title="Ας συστηθούμε">
       <TextSection>
         <H size={2}>Ας συστηθούμε</H>
         <p>

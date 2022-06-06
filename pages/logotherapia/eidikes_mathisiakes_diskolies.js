@@ -6,7 +6,7 @@ import TextSection from "../../components/TextSection";
 
 export default function EidikesMathisiakesDiskolies() {
   return (
-    <BaseLayout>
+    <BaseLayout title="Ειδικές μαθησιακές δυσκολίες">
       <TextSection>
         <H size={2}>Ειδικές μαθησιακές δυσκολίες</H>
         <H size={3}>Εικόνα παιδιού</H>

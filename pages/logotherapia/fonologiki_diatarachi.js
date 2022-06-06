@@ -6,7 +6,7 @@ import TextSection from "../../components/TextSection";
 
 export default function FonologikiDiatarachi() {
   return (
-    <BaseLayout>
+    <BaseLayout title="Φωνολογική διαταραχή">
       <TextSection>
         <H size={2}>Φωνολογική διαταραχή</H>
         <H size={3}>Εικόνα παιδιού</H>

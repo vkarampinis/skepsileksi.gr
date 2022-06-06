@@ -5,7 +5,7 @@ import TextSection from "../../components/TextSection";
 
 export default function Traulismos() {
   return (
-    <BaseLayout>
+    <BaseLayout title="Τραυλισμός">
       <TextSection>
         <H size={2}>Τραυλισμός</H>
         <H size={3}>Εικόνα παιδιού</H>

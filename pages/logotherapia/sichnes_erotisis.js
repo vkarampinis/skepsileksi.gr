@@ -36,7 +36,7 @@ const FAQ = [
 
 export default function Sichnes_erotisis() {
   return (
-    <BaseLayout>
+    <BaseLayout title="Συχνές ερωτήσεις">
       <FAQPageJsonLd
         mainEntity={FAQ.map((item) => ({
           questionName: item.question,

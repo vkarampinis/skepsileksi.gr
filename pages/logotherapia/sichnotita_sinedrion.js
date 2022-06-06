@@ -5,7 +5,7 @@ import TextSection from "../../components/TextSection";
 
 export default function SichnotitaSinedrion() {
   return (
-    <BaseLayout>
+    <BaseLayout title="Συχνότητα συνεδριών">
       <TextSection>
         <H size={2}>Συχνότητα συνεδριών</H>
         <p>

@@ -7,7 +7,7 @@ import links from "../config/links";
 
 export default function Tiletherapia() {
   return (
-    <BaseLayout>
+    <BaseLayout title="Τηλεθεραπεία">
       <TextSection>
         <H size={2}>Τηλεθεραπεία</H>
         <p>

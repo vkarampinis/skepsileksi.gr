@@ -5,7 +5,7 @@ import TextSection from "../../components/TextSection";
 
 export default function FysiologikiAnaptiksiTouLogou() {
   return (
-    <BaseLayout>
+    <BaseLayout title="Φυσιολογική ανάπτυξη του λόγου και της ομιλίας">
       <TextSection>
         <H size={2}>Φυσιολογική ανάπτυξη του λόγου και της ομιλίας</H>
         <p>

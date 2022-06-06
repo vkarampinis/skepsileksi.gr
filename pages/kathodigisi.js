@@ -7,7 +7,7 @@ import links from "../config/links";
 
 export default function Kathodigisi() {
   return (
-    <BaseLayout>
+    <BaseLayout title="Καθοδήγηση γονέων">
       <TextSection>
         <H size={2}>Καθοδήγηση γονέων</H>
         <p>

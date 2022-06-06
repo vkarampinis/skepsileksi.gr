@@ -5,10 +5,10 @@ import TextSection from "../../components/TextSection";
 
 export default function EidikiGlwsikiDiatarachiAntiliptouKaiEkfrastikouTupou() {
   return (
-    <BaseLayout>
+    <BaseLayout title="Ειδική γλωσσική διαταραχή αντιληπτικού ή και εκφραστικού τύπου (ΕΓΔ)">
       <TextSection>
         <H size={2}>
-          Ειδική γλωσσική διαταραχή αντιληπτικού ή/και εκφραστικού τύπου (ΕΓΔ)
+          Ειδική γλωσσική διαταραχή αντιληπτικού ή και εκφραστικού τύπου (ΕΓΔ)
         </H>
         <H size={3}>Εικόνα παιδιού</H>
         <p>
