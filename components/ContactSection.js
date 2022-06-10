@@ -8,7 +8,7 @@ export default function ContactSection() {
       <div className="max-w-6xl p-4 mx-auto mt-10 prose prose-xl md:mt-24 ">
         <H size={2}>Δωρεάν αξιολόγηση</H>
         <p>
-          Ανεξάρτητα από το πού μένεις, η βοήθεια είναι πάντα{" "}
+          Ανεξάρτητα από το που μένεις, η βοήθεια είναι πάντα{" "}
           <Highlight>δίπλα σου!</Highlight>
         </p>
         <ContactForm />
