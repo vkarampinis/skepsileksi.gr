@@ -3,6 +3,7 @@ import { NextSeo } from "next-seo";
 import Head from "next/head";
 import FacebookPixel from "../components/FacebookPixel";
 import HubSpotTracking from "../components/HubSpotTracking";
+import Microanalytics from "../components/Microanalytics";
 import "../styles/globals.css";
 
 function _App({ Component, pageProps }) {
@@ -35,6 +36,7 @@ function _App({ Component, pageProps }) {
       </Head>
       <FacebookPixel />
       <HubSpotTracking />
+      <Microanalytics />
       <Component {...pageProps} />
     </>
   );
