@@ -23,5 +23,17 @@ module.exports = withPlugins(
     images: {
       disableStaticImages: true,
     },
+    async rewrites() {
+      return [
+        {
+          source: "/js/script.js",
+          destination: "https://microanalytics.io/js/script.js",
+        },
+        {
+          source: "/api/event", // Or '/api/event/' if you have `trailingSlash: true` in this config
+          destination: "https://microanalytics.io/api/event",
+        },
+      ];
+    },
   }
 );
