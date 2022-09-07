@@ -1,4 +1,5 @@
 const links = {
+  Home: "/",
   Tiletherapia: "/tiletherapia",
   Kathodigisi: "/kathodigisi",
   Logotherapia: "/logotherapia",

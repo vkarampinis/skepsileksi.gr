@@ -37,8 +37,13 @@ function Logo() {
 }
 
 function Nav({ className }) {
+  const router = useRouter();
+
   return (
     <nav className={` ${className}`}>
+      {router.asPath !== links.Home && (
+        <NavItem href={links.Home}>Αρχική</NavItem>
+      )}
       <NavItem href={links.Tiletherapia}>Τηλεθεραπεία</NavItem>
       <NavItem href={links.Kathodigisi}>Καθοδήγηση</NavItem>
       <NavItem href={links.Logotherapia}>Λογοθεραπεία</NavItem>
