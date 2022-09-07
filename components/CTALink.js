@@ -14,7 +14,7 @@ export default function CTALink({
           <H size={3} className="text-color-white">
             {title}
           </H>
-          <p className="pb-4 text-base sm:pb-0 text-color-white">{children}</p>
+          <p className="pb-4 text-lg sm:pb-0 text-color-white">{children}</p>
         </div>
         <div className="items-center sm:basis-1/5">
           <Button link={link} className="block">
