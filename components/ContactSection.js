@@ -1,6 +1,7 @@
 import ContactForm from "./ContactForm";
 import H from "./H";
 import Highlight from "./Highlight";
+import MyTelephone from "./MyTelephone";
 
 export default function ContactSection() {
   return (
@@ -10,6 +11,11 @@ export default function ContactSection() {
         <p>
           Ανεξάρτητα από το που μένεις, η βοήθεια είναι πάντα{" "}
           <Highlight>δίπλα σου!</Highlight>
+        </p>
+
+        <p>
+          Kαλέστε με στο <MyTelephone /> ή συμπληρώστε την φόρμα και θα
+          επικοινωνήσω σύντομα μαζί σας.
         </p>
         <ContactForm />
       </div>
