@@ -33,6 +33,19 @@ module.exports = withPlugins(
           source: "/api/event", // Or '/api/event/' if you have `trailingSlash: true` in this config
           destination: "https://microanalytics.io/api/event",
         },
+        {
+          source: "/logotherapeia",
+          destination: "/logotherapia",
+        },
+      ];
+    },
+    async redirects() {
+      return [
+        {
+          source: "/logotherapeia",
+          destination: "/logotherapia",
+          permanent: false,
+        },
       ];
     },
   }
