@@ -5,7 +5,7 @@ export default function Button({ className = "", pink, link, children }) {
   return (
     <Link href={link}>
       <a
-        className={`px-4 py-2 text-center text-white whitespace-nowrap ${color} ${className}`}
+        className={`px-4 py-2 text-center text-white no-underline hover:text-color-white whitespace-nowrap ${color} ${className}`}
       >
         {children}
       </a>
