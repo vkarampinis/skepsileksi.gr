@@ -37,7 +37,7 @@ function Hero() {
       <div className="relative flex flex-row max-w-6xl mx-auto">
         <div className="basis-full sm:basis-3/5">
           <h1 className="px-4 mb-16 text-4xl font-bold uppercase md:text-5xl lg:text-6xl font-header text-color-white">
-            Online
+            <span>Online </span>
             <span className="block mt-4">
               <Highlight>Λογοθεραπεια</Highlight>
             </span>
