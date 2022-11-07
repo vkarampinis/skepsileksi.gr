@@ -23,6 +23,10 @@ module.exports = withPlugins(
     images: {
       disableStaticImages: true,
     },
+    i18n: {
+      locales: ["el"],
+      defaultLocale: "el",
+    },
     async rewrites() {
       return [
         {
