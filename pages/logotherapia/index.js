@@ -22,30 +22,42 @@ export default function Logotherapia() {
         </p>
         <ul className="list-disc list-inside">
           <li>
-            <Link href={links.FonologikiDiatarachi}>Φωνολογική διαταραχή</Link>
+            <Link href={links.FonologikiDiatarachi}>
+              <a title="Φωνολογική διαταραχή">Φωνολογική διαταραχή</a>
+            </Link>
           </li>
           <li>
-            <Link href={links.DiatarachesArthrosis}>Διαταραχές άρθρωσης</Link>
+            <Link href={links.DiatarachesArthrosis}>
+              <a title="Διαταραχές άρθρωσης">Διαταραχές άρθρωσης</a>
+            </Link>
           </li>
           <li>
             <Link
               href={links.EidikiGlwsikiDiatarachiAntiliptouKaiEkfrastikouTupou}
             >
-              Ειδική γλωσσική διαταραχή αντιληπτικού ή/και εκφραστικού τύπου
-              (ΕΓΔ)
+              <a title="Ειδική γλωσσική διαταραχή αντιληπτικού ή/και εκφραστικού τύπου (ΕΓΔ)">
+                Ειδική γλωσσική διαταραχή αντιληπτικού ή/και εκφραστικού τύπου
+                (ΕΓΔ)
+              </a>
             </Link>
           </li>
           <li>
             <Link href={links.Autismos}>
-              Διάχυτη αναπτυξιακή διαταραχή (αυτισμός)
+              <a title="Διάχυτη αναπτυξιακή διαταραχή (αυτισμός)">
+                Διάχυτη αναπτυξιακή διαταραχή (αυτισμός)
+              </a>
             </Link>
           </li>
           <li>
-            <Link href={links.Traulismos}>Τραυλισμός</Link>
+            <Link href={links.Traulismos}>
+              <a title="Τραυλισμός">Τραυλισμός</a>
+            </Link>
           </li>
           <li>
             <Link href={links.EidikesMathisiakesDiskolies}>
-              Ειδικές μαθησιακές δυσκολίες
+              <a title="Ειδικές μαθησιακές δυσκολίες">
+                Ειδικές μαθησιακές δυσκολίες
+              </a>
             </Link>
           </li>
         </ul>
@@ -104,17 +116,25 @@ export default function Logotherapia() {
         <ul className="list-disc list-inside">
           <li>
             <Link href={links.FysiologikiAnaptiksiTouLogou}>
-              Φυσιολογική ανάπτυξη του λόγου και της ομιλίας
+              <a title="Φυσιολογική ανάπτυξη του λόγου και της ομιλίας">
+                Φυσιολογική ανάπτυξη του λόγου και της ομιλίας
+              </a>
             </Link>
           </li>
           <li>
-            <Link href={links.ProtiSinantisi}>Πρώτη συνάντηση</Link>
+            <Link href={links.ProtiSinantisi}>
+              <a title="Πρώτη συνάντηση">Πρώτη συνάντηση</a>
+            </Link>
           </li>
           <li>
-            <Link href={links.SichnotitaSinedrion}>Συχνότητα συνεδριών</Link>
+            <Link href={links.SichnotitaSinedrion}>
+              <a title="Συχνότητα συνεδριών">Συχνότητα συνεδριών</a>
+            </Link>
           </li>
           <li>
-            <Link href={links.SichnesErotisis}>Συχνές ερωτήσεις</Link>
+            <Link href={links.SichnesErotisis}>
+              <a title="Συχνές ερωτήσεις">Συχνές ερωτήσεις</a>
+            </Link>
           </li>
         </ul>
       </TextSection>

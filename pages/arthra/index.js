@@ -22,7 +22,9 @@ function Article({ title, slug, description, image }) {
   return (
     <div>
       {/* <ArticleImage name={image} className="inline-block w-48" /> */}
-      <Link href={`${links.Arthra}/${slug}`}>{title}</Link>
+      <Link href={`${links.Arthra}/${slug}`} passHref>
+        <a title={title}>{title}</a>
+      </Link>
     </div>
   );
 }
