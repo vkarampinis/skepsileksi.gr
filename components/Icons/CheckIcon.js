@@ -1,4 +1,4 @@
-export default function CheckIcon({ className }) {
+export default function CheckIcon({ className = "" }) {
   return (
     <svg
       fill="none"

@@ -1,7 +1,7 @@
 import Script from "next/script";
 import { useEffect } from "react";
 
-export default function ContactForm({ className }) {
+export default function ContactForm() {
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "//js-eu1.hsforms.net/forms/v2.js";

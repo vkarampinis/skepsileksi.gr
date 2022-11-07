@@ -1,4 +1,4 @@
-export default function Highlight({ className, textClass, children }) {
+export default function Highlight({ className = "", textClass, children }) {
   return (
     <span className={`relative ${className}`}>
       <span

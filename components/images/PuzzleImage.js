@@ -1,4 +1,4 @@
-export default function PuzzleImage({ className }) {
+export default function PuzzleImage({ className = "" }) {
   return (
     <svg
       fill="none"
