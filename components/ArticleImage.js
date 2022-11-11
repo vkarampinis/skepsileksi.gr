@@ -1,31 +1,26 @@
 import mime from "mime-types";
 
-export default function ArticleImage({ name, source, className = "" }) {
-  const multipleSizes = require.context(
-    "../articles/images?resize",
-    false
-  )(`./${name}`);
-  const multipleSizesWebp = require.context(
-    "../articles/images?resize&format=webp",
-    false
-  )(`./${name}`);
-
+export default function ArticleImage({ image, source, className = "" }) {
   return (
     <div>
       <picture>
         <source
-          srcSet={multipleSizesWebp.srcSet}
-          src={multipleSizesWebp.src}
-          alt={name}
-          type={mime.lookup(multipleSizesWebp.src)}
+          srcSet={image.multipleSizesWebp.srcSet}
+          src={image.multipleSizesWebp.src}
+          alt={image.name}
+          type={mime.lookup(image.multipleSizesWebp.src)}
         />
         <source
-          srcSet={multipleSizes.srcSet}
-          src={multipleSizes.src}
-          alt={name}
-          type={mime.lookup(multipleSizes.src)}
+          srcSet={image.multipleSizes.srcSet}
+          src={image.multipleSizes.src}
+          alt={image.name}
+          type={mime.lookup(image.multipleSizes.src)}
         />
-        <img src={name} alt={name} className={`my-0 ${className}`} />
+        <img
+          src={image.name}
+          alt={image.name}
+          className={`my-0 ${className}`}
+        />
       </picture>
       {source && (
         <div className="py-2 text-sm text-left text-slate-400 ">
