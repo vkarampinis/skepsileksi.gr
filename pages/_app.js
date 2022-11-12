@@ -2,7 +2,7 @@ import "@fontsource/ubuntu/700.css";
 import { NextSeo } from "next-seo";
 import Head from "next/head";
 import FacebookPixel from "../components/FacebookPixel";
-import GTagManager from "../components/GTagmanager";
+import GTagManager from "../components/GTagManager";
 import HubSpotTracking from "../components/HubSpotTracking";
 import Microanalytics from "../components/Microanalytics";
 import "../styles/globals.css";

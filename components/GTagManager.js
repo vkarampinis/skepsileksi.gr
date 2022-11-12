@@ -1,9 +1,5 @@
 import Script from "next/script";
 
-const pageview = () => {
-  window.fbq("track", "PageView");
-};
-
 export default function GTagManager() {
   return (
     <>
@@ -11,19 +7,17 @@ export default function GTagManager() {
         id="gtag-src"
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-J0REX41KBJ"
+        strategy="afterInteractive"
       ></Script>
-      <Script
-        id="gtag-init"
-        dangerouslySetInnerHTML={{
-          __html: `
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+      <Script id="gtag-init" strategy="afterInteractive">
+        {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-  gtag('config', 'G-J0REX41KBJ');
-  `,
-        }}
-      ></Script>
+        gtag('config', 'G-J0REX41KBJ');
+        `}
+      </Script>
     </>
   );
 }
