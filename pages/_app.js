@@ -2,6 +2,7 @@ import "@fontsource/ubuntu/700.css";
 import { NextSeo } from "next-seo";
 import Head from "next/head";
 import FacebookPixel from "../components/FacebookPixel";
+import GTagManager from "../components/GTagmanager";
 import HubSpotTracking from "../components/HubSpotTracking";
 import Microanalytics from "../components/Microanalytics";
 import "../styles/globals.css";
@@ -37,6 +38,7 @@ function _App({ Component, pageProps }) {
       <FacebookPixel />
       <HubSpotTracking />
       <Microanalytics />
+      <GTagManager />
       <Component {...pageProps} />
     </>
   );
