@@ -31,11 +31,11 @@ module.exports = withPlugins(
       return [
         {
           source: "/js/script.js",
-          destination: "https://microanalytics.io/js/script.js",
+          destination: "https://app.microanalytics.io/js/script.js",
         },
         {
           source: "/api/event", // Or '/api/event/' if you have `trailingSlash: true` in this config
-          destination: "https://microanalytics.io/api/event",
+          destination: "https://app.microanalytics.io/api/event",
         },
         {
           source: "/logotherapeia",
