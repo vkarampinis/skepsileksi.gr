@@ -34,7 +34,7 @@ const Article = ({ source, frontMatter }) => {
           openGraph={{
             type: "article",
             url: `https://skepsileksi.gr${router.asPath}`,
-            title: `${frontMatter.title} | Online Λογοθεραπεία • Σκέψη - Λέξη`,
+            title: `${frontMatter.title} | Online Λογοθεραπεία μέσω Skype, Zoom • Σκέψη - Λέξη`,
             description:
               "Λογοθεραπεία εξ αποστάσεως μέσω skype σε παιδιά Ελλήνων εσωτερικού και εξωτερικού με αυτισμό, τραυλισμό, διαταραχές άρθρωσης, μαθησιακές δυσκολίες. Καθοδήγηση γονέων και εκπαιδευτικό υλικό. Ανεξάρτητα από το που μένεις, η βοήθεια είναι πάντα δίπλα σου!",
             images: [
@@ -42,7 +42,7 @@ const Article = ({ source, frontMatter }) => {
                 url: `https://skepsileksi.gr${ogimage.path}`,
                 width: ogimage.width,
                 height: ogimage.height,
-                alt: `${frontMatter.title} | Online Λογοθεραπεία • Σκέψη - Λέξη`,
+                alt: `${frontMatter.title} | Online Λογοθεραπεία μέσω Skype, Zoom • Σκέψη - Λέξη`,
                 type: "image/webp",
               },
             ],
