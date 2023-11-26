@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 
 export default function BaseLayout({
-  title = "Online Λογοθεραπεία",
+  title = "Online Λογοθεραπεία μέσω Skype, Zoom",
   children,
   className = "",
 }) {
