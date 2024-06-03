@@ -4,6 +4,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import posthog from "posthog-js";
 import { PostHogProvider } from "posthog-js/react";
+import { useEffect } from "react";
 import FacebookPixel from "../components/FacebookPixel";
 import GTagManager from "../components/GTagManager";
 import HubSpotTracking from "../components/HubSpotTracking";
