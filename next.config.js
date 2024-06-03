@@ -30,6 +30,14 @@ module.exports = withPlugins(
     async rewrites() {
       return [
         {
+          source: "/ingest/static/:path*",
+          destination: "https://eu-assets.i.posthog.com/static/:path*",
+        },
+        {
+          source: "/ingest/:path*",
+          destination: "https://eu.i.posthog.com/:path*",
+        },
+        {
           source: "/js/script.js",
           destination: "https://app.microanalytics.io/js/script.js",
         },
@@ -43,6 +51,7 @@ module.exports = withPlugins(
         },
       ];
     },
+    skipTrailingSlashRedirect: true,
     async redirects() {
       return [
         {
