@@ -3,7 +3,7 @@ import H from "./H";
 
 const MDXComponents = {
   p: (props) => <p {...props} />,
-  a: (props) => <Link {...props} />,
+  a: (props) => <Link {...props} legacyBehavior />,
   h1: (props) => <H size={1} {...props} />,
   h2: (props) => <H size={2} {...props} />,
   h3: (props) => <H size={3} {...props} />,

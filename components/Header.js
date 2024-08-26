@@ -28,11 +28,11 @@ export default function Header() {
 
 function Logo() {
   return (
-    <Link href="/" passHref>
-      <a title="Αρχική">
-        <img src="/images/logo.png" className="w-24 lg:w-44" alt="Logo" />
-      </a>
-    </Link>
+    (<Link href="/" passHref title="Αρχική">
+
+      <img src="/images/logo.png" className="w-24 lg:w-44" alt="Logo" />
+
+    </Link>)
   );
 }
 
@@ -59,18 +59,19 @@ function NavItem({ href = "#", children }) {
 
   return (
     <span className="block sm:inline-block sm:mx-2">
-      <Link href={href} passHref>
-        <a
-          title={children}
-          className={clsx(
-            "whitespace-nowrap px-4 py-2 border-b sm:border-0 border-color-2 w-full block sm:px-2 sm:text-xs text-lg md:text-base lg:text-xl text-color-white hover:cursor-pointer hover:bg-color-2 font-header",
-            {
-              "bg-color-2": isActive,
-            }
-          )}
-        >
-          {children}
-        </a>
+      <Link
+        href={href}
+        passHref
+        title={children}
+        className={clsx(
+          "whitespace-nowrap px-4 py-2 border-b sm:border-0 border-color-2 w-full block sm:px-2 sm:text-xs text-lg md:text-base lg:text-xl text-color-white hover:cursor-pointer hover:bg-color-2 font-header",
+          {
+            "bg-color-2": isActive,
+          }
+        )}>
+
+        {children}
+
       </Link>
     </span>
   );

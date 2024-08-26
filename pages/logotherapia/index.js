@@ -22,42 +22,44 @@ export default function Logotherapia() {
         </p>
         <ul className="list-disc list-inside">
           <li>
-            <Link href={links.FonologikiDiatarachi}>
-              <a title="Φωνολογική διαταραχή">Φωνολογική διαταραχή</a>
+            <Link href={links.FonologikiDiatarachi} title="Φωνολογική διαταραχή">
+              Φωνολογική διαταραχή
             </Link>
           </li>
           <li>
-            <Link href={links.DiatarachesArthrosis}>
-              <a title="Διαταραχές άρθρωσης">Διαταραχές άρθρωσης</a>
+            <Link href={links.DiatarachesArthrosis} title="Διαταραχές άρθρωσης">
+              Διαταραχές άρθρωσης
             </Link>
           </li>
           <li>
             <Link
               href={links.EidikiGlwsikiDiatarachiAntiliptouKaiEkfrastikouTupou}
-            >
-              <a title="Ειδική γλωσσική διαταραχή αντιληπτικού ή/και εκφραστικού τύπου (ΕΓΔ)">
+              title="Ειδική γλωσσική διαταραχή αντιληπτικού ή/και εκφραστικού τύπου (ΕΓΔ)">
+              
                 Ειδική γλωσσική διαταραχή αντιληπτικού ή/και εκφραστικού τύπου
                 (ΕΓΔ)
-              </a>
+              
             </Link>
           </li>
           <li>
-            <Link href={links.Autismos}>
-              <a title="Διάχυτη αναπτυξιακή διαταραχή (αυτισμός)">
+            <Link href={links.Autismos} title="Διάχυτη αναπτυξιακή διαταραχή (αυτισμός)">
+              
                 Διάχυτη αναπτυξιακή διαταραχή (αυτισμός)
-              </a>
+              
             </Link>
           </li>
           <li>
-            <Link href={links.Traulismos}>
-              <a title="Τραυλισμός">Τραυλισμός</a>
+            <Link href={links.Traulismos} title="Τραυλισμός">
+              Τραυλισμός
             </Link>
           </li>
           <li>
-            <Link href={links.EidikesMathisiakesDiskolies}>
-              <a title="Ειδικές μαθησιακές δυσκολίες">
+            <Link
+              href={links.EidikesMathisiakesDiskolies}
+              title="Ειδικές μαθησιακές δυσκολίες">
+              
                 Ειδικές μαθησιακές δυσκολίες
-              </a>
+              
             </Link>
           </li>
         </ul>
@@ -115,25 +117,27 @@ export default function Logotherapia() {
         <H size={2}>Χρήσιμες πληροφορίες</H>
         <ul className="list-disc list-inside">
           <li>
-            <Link href={links.FysiologikiAnaptiksiTouLogou}>
-              <a title="Φυσιολογική ανάπτυξη του λόγου και της ομιλίας">
+            <Link
+              href={links.FysiologikiAnaptiksiTouLogou}
+              title="Φυσιολογική ανάπτυξη του λόγου και της ομιλίας">
+              
                 Φυσιολογική ανάπτυξη του λόγου και της ομιλίας
-              </a>
+              
             </Link>
           </li>
           <li>
-            <Link href={links.ProtiSinantisi}>
-              <a title="Πρώτη συνάντηση">Πρώτη συνάντηση</a>
+            <Link href={links.ProtiSinantisi} title="Πρώτη συνάντηση">
+              Πρώτη συνάντηση
             </Link>
           </li>
           <li>
-            <Link href={links.SichnotitaSinedrion}>
-              <a title="Συχνότητα συνεδριών">Συχνότητα συνεδριών</a>
+            <Link href={links.SichnotitaSinedrion} title="Συχνότητα συνεδριών">
+              Συχνότητα συνεδριών
             </Link>
           </li>
           <li>
-            <Link href={links.SichnesErotisis}>
-              <a title="Συχνές ερωτήσεις">Συχνές ερωτήσεις</a>
+            <Link href={links.SichnesErotisis} title="Συχνές ερωτήσεις">
+              Συχνές ερωτήσεις
             </Link>
           </li>
         </ul>

@@ -48,8 +48,8 @@ export default function Sichnes_erotisis() {
         <ul className="list-disc list-outside">
           {FAQ.map((item, index) => (
             <li key={index}>
-              <Link href={"#faq-" + (index + 1)}>
-                <a title={item.question}>{item.question}</a>
+              <Link href={"#faq-" + (index + 1)} title={item.question}>
+                {item.question}
               </Link>
             </li>
           ))}
