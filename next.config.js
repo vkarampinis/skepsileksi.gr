@@ -1,6 +1,55 @@
 const withPlugins = require("next-compose-plugins");
 const optimizedImages = require("next-optimized-images");
 
+/**
+ * @type {import('next').NextConfig}
+ */
+const nextConfig = {
+  /* gerneral config of nextjs */
+  reactStrictMode: true,
+  images: {
+    disableStaticImages: true,
+  },
+  i18n: {
+    locales: ["el"],
+    defaultLocale: "el",
+  },
+  async rewrites() {
+    return [
+      {
+        source: "/ingest/static/:path*",
+        destination: "https://eu-assets.i.posthog.com/static/:path*",
+      },
+      {
+        source: "/ingest/:path*",
+        destination: "https://eu.i.posthog.com/:path*",
+      },
+      {
+        source: "/js/script.js",
+        destination: "https://app.microanalytics.io/js/script.js",
+      },
+      {
+        source: "/api/event", // Or '/api/event/' if you have `trailingSlash: true` in this config
+        destination: "https://app.microanalytics.io/api/event",
+      },
+      {
+        source: "/logotherapeia",
+        destination: "/logotherapia",
+      },
+    ];
+  },
+  skipTrailingSlashRedirect: true,
+  async redirects() {
+    return [
+      {
+        source: "/logotherapeia",
+        destination: "/logotherapia",
+        permanent: false,
+      },
+    ];
+  },
+};
+
 module.exports = withPlugins(
   [
     [
@@ -17,49 +66,5 @@ module.exports = withPlugins(
       },
     ],
   ],
-  {
-    /* gerneral config of nextjs */
-    reactStrictMode: true,
-    images: {
-      disableStaticImages: true,
-    },
-    i18n: {
-      locales: ["el"],
-      defaultLocale: "el",
-    },
-    async rewrites() {
-      return [
-        {
-          source: "/ingest/static/:path*",
-          destination: "https://eu-assets.i.posthog.com/static/:path*",
-        },
-        {
-          source: "/ingest/:path*",
-          destination: "https://eu.i.posthog.com/:path*",
-        },
-        {
-          source: "/js/script.js",
-          destination: "https://app.microanalytics.io/js/script.js",
-        },
-        {
-          source: "/api/event", // Or '/api/event/' if you have `trailingSlash: true` in this config
-          destination: "https://app.microanalytics.io/api/event",
-        },
-        {
-          source: "/logotherapeia",
-          destination: "/logotherapia",
-        },
-      ];
-    },
-    skipTrailingSlashRedirect: true,
-    async redirects() {
-      return [
-        {
-          source: "/logotherapeia",
-          destination: "/logotherapia",
-          permanent: false,
-        },
-      ];
-    },
-  }
+  nextConfig
 );
