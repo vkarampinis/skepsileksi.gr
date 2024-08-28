@@ -2,6 +2,7 @@ import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import { ArticleJsonLd, NextSeo } from "next-seo";
 import { useRouter } from "next/router";
+import remarkGfm from "remark-gfm";
 import ArticleImage from "../../components/ArticleImage";
 import BaseLayout from "../../components/BaseLayout";
 import MDXComponents from "../../components/MDXComponents";
@@ -87,7 +88,7 @@ export const getStaticProps = async ({ params }) => {
   const source = await serialize(content, {
     // Optionally pass remark/rehype plugins
     mdxOptions: {
-      remarkPlugins: [],
+      remarkPlugins: [remarkGfm],
       rehypePlugins: [],
     },
     scope: data,
