@@ -63,6 +63,8 @@ const Article = ({ source, frontMatter }) => {
           datePublished={new Date(frontMatter.date).toISOString()}
           authorName="Αποστολάκη Μαρία"
           publisherName="Αποστολάκη Μαρία"
+          isAccessibleForFree={true}
+          type="Article"
           // publisherLogo="https://www.example.com/photos/logo.jpg"
           description={frontMatter.description}
         />
