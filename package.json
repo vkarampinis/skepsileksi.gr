@@ -9,6 +9,9 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "engines": {
+    "node": ">=20"
+  },
   "dependencies": {
     "@fontsource/ubuntu": "^5.0.14",
     "gray-matter": "^4.0.3",
