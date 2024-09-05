@@ -11,7 +11,7 @@ export default function Index({ articles }) {
     <BaseLayout>
       <TextSection>
         <H size={2}>Άρθρα</H>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {articles.map((article) => (
             <Article key={article.title} {...article} />
           ))}
@@ -35,21 +35,19 @@ function Article({ title, slug, description, image }) {
   )(`./${image}`);
 
   return (
-    <div className="flex flex-col items-start border border-solid rounded-lg hover:shadow-md border-slate-200">
-      <ArticleImage
-        image={{
-          name: title,
-          multipleSizes,
-          multipleSizesWebp,
-        }}
-        className="w-full p-0 m-0 rounded-t-lg aspect-video"
-      />
-      <div className="p-4">
-        <Link href={`${links.Arthra}/${slug}`} passHref title={title}>
-          {title}
-        </Link>
+    <Link href={`${links.Arthra}/${slug}`} passHref title={title}>
+      <div className="flex flex-col items-start transition-all duration-300 border border-solid rounded-lg hover:shadow-lg hover:scale-105 border-slate-200">
+        <ArticleImage
+          image={{
+            name: title,
+            multipleSizes,
+            multipleSizesWebp,
+          }}
+          className="w-full p-0 m-0 rounded-t-lg aspect-video"
+        />
+        <div className="p-4">{title}</div>
       </div>
-    </div>
+    </Link>
   );
 }
 
