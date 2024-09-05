@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import remarkGfm from "remark-gfm";
 import ArticleImage from "../../components/ArticleImage";
 import BaseLayout from "../../components/BaseLayout";
+import ContactSection from "../../components/ContactSection";
 import MDXComponents from "../../components/MDXComponents";
 import TextSection from "../../components/TextSection";
 import utils from "../../utils/blog";
@@ -75,10 +76,12 @@ const Article = ({ source, frontMatter }) => {
               multipleSizes,
               multipleSizesWebp,
             }}
+            className="mb-0"
             source={frontMatter.imageSource}
           />
         )}
         <MDXRemote {...source} components={MDXComponents} />
+        <ContactSection />
       </TextSection>
     </BaseLayout>
   );
