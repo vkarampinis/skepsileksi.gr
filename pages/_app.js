@@ -21,6 +21,9 @@ if (typeof window !== "undefined") {
     loaded: (posthog) => {
       if (process.env.NODE_ENV === "development") posthog.debug();
     },
+    session_recording: {
+      maskAllInputs: false,
+    },
   });
 }
 
